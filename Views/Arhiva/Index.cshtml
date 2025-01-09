@@ -1,0 +1,160 @@
+﻿@model Social_Life.Models.Thread2;
+@inject UserManager<ApplicationUser> UserManager
+@using System.Security.Claims
+@using Newtonsoft.Json;
+@inject ApplicationDbContext db
+@{
+    var user_Id = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+    var profile = db.Profiles.FirstOrDefault(p => p.Id_User == user_Id);
+}
+@{
+    ApplicationUser currentUser = null;
+
+    if (User.Identity.IsAuthenticated)
+    {
+        var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        currentUser = await UserManager.FindByIdAsync(userId);
+    }
+}
+@using Microsoft.AspNetCore.Identity
+@using Social_Life.Data
+@inject SignInManager<ApplicationUser> SignInManager
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SOCIAL LIFE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/profil.css">
+    <link rel="stylesheet" href="css/arhiva.css">
+    <link rel="stylesheet" href="css/profilePostare.css" />
+    <link rel="stylesheet" href="css/CommentBox.css">
+    <style>
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #00ffcc;
+            border-radius: 5px;
+            width: 6px;
+            height: 40px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+            border-radius: 20px;
+        }
+
+        scrollbar-width: thin;
+        scrollbar-color: #00ffcc transparent;
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img id="logo" src="imagini/logoAlb.png">
+    </div>
+    <div class="sideMenu">
+        <div id="buton1">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <a href="#">FOR YOU</a>
+        </div>
+        <div id="buton">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <a href="@Url.Action("Search1", "Search")">CAUTĂ</a>
+        </div>
+        <div id="buton">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <a href="@Url.Action("Index", "Profile")">PROFIL</a>
+        </div>
+        <div id="buton">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <a href="#">GRUPURI</a>
+        </div>
+        <div id="buton">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+            <a asp-controller="Setari" asp-action="Index">SETĂRI</a>
+
+        </div>
+        <div id="buton">
+            <a href="Identity/Account/Logout">DECONECTEAZĂ-TE</a>
+        </div>
+    </div>
+    <div id="PostariPage">
+        @if (db.Postari.Where(t => t.UserId == user_Id && t.Arhivat == true).Count() == 0){
+            <img id="nuPoze" src="imagini/noArhiva.png">
+            <h3 id="nuPozeText">NU AI POZE ARHIVATE!</h3>
+        }
+        else{
+            <div class="grid-container">
+                @foreach (var postare in db.Postari.Where(t => t.UserId == user_Id && t.Arhivat == true).OrderByDescending(t => t.Data))
+                {
+                    <div class="pozaPostata" id="postare-@postare.Id" onclick="arataPostareDetaliataArhiva(@postare.Id)">
+                        <img id="img-@postare.Id" src="@postare.Imagine" />
+                        <p id="descAscuns-@postare.Id" style="display:none">@postare.Descriere</p>
+                    </div>
+                    <div id="PostareDetaliata-@postare.Id">
+                        <i id="xVizualizare" class="fa-solid fa-x" onclick="xPostareDeschisa(@postare.Id)"></i>
+                        <i id="btnMenuPostare" onclick="openDropdownPostari(@postare.Id)" class="fa fa-ellipsis-v dropdown-toggle"></i>
+                        <div id="dropdownPostare-@postare.Id" class="ddPostare">
+                            <form method="post" asp-controller="Arhiva" asp-action="Reposteaza">
+                                <input type="hidden" name="Id" value="@postare.Id" />
+                                <button id="EditeazaPostare"><i class="fas fa-archive"></i>Repostează</button>
+                            </form>
+                           
+                            <div id="StergePostare" onclick="openConfirmareStergerePostareArhiva(@postare.Id)"><i class="fa fa-trash" aria-hidden="true"></i>Șterge</div>
+                        </div>
+                        <img id="pozaDT-@postare.Id" />
+                        <div id="butoanePostare">
+                            <div id="descrierePostare-@postare.Id"><p id="descReal-@postare.Id"></p></div>
+                            @{
+                                var userLiked = db.PostareLikes2.Any(like => like.PostareId == postare.Id && like.ProfileId == UserManager.GetUserId(User));
+                            }
+                            
+                                
+                            <div type="submit" id="btnLikePostare"><i class="fas fa-thumbs-up"><span id="NrLikePost"> @postare.NrLikePostare </span></i></div>
+                           
+                            <div id="btnLikePostare"> <i class="fa-solid fa-comment"> @postare.NrComentarii </i></div>
+                        </div>
+                        <div id="PostCommentBox-@postare.Id" class="PostCommentBox">
+                            @foreach (var com in db.PostsComments.Where(c => c.PostId == postare.Id).OrderByDescending(t => t.Date))
+                            {
+                                com.Profile = db.Profiles.FirstOrDefault(p => p.Id_User == com.Id_User);
+                                <div id="PostafisCom" class="afisComPost-@com.PostCommentId">
+      
+                                    <p id="afisUser">@com.Profile?.Username</p>
+                                    <p id="afisComText">@com.CommentText</p>
+                                    <p id="afisOra">
+                                        @com.Date
+                                        @if (com.Edited == true)
+                                        {
+                                            <em>(editat)</em>
+                                        }
+                                    </p>
+                       
+                       
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div id="ConfirmareSArhiva-@postare.Id">
+                        <i id="xConfirmaStergere" onclick="inchideConfirmaStergerePostareArhiva(@postare.Id)" class="fa-solid fa-x"></i>
+                        <i id="dngPostare" class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                        <form id="confButton" method="post" asp-controller="Postare" asp-action="Delete">
+                            <input type="hidden" name="postareId" value="@postare.Id" />
+                            <button type="submit" id="confirmaButtonPostareArhiva">CONFIRMĂ!</button>
+                        </form>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+    <script src="js/arhiva.js"></script>
+    <script src="js/postare.js"></script>
+    <script src="js/thread.js"></script>
+    <script src="js/profil.js"></script>
+    <script src="js/CommentBox.js"></script>
+    <script src="js/fisaUrmaritori.js"></script>
+</body>
+</html>
