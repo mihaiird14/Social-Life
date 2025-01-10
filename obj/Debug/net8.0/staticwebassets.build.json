@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MZHaizOCsOY5ChJ8GVoORoW7/iXYxnU+lWhoMoIyo3o=",
+  "Hash": "OEi9oBwfk6P3PiF+ntc8drt83FYyNwQR7oN149T2kqw=",
   "Source": "Social Life",
   "BasePath": "_content/Social Life",
   "Mode": "Default",
@@ -1900,8 +1900,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "tqicjqdchk",
-      "Integrity": "G6v7K4OCq0fht1HtApZR6KTaLc8fFUAJSXkqfGCHY5E=",
+      "Fingerprint": "prscgc30z7",
+      "Integrity": "pQy/LWDBaCINYCzRL9Q5qdAkGdecMY5Gd0z4pWaL7oc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\arhiva.js"
@@ -3317,7 +3317,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 09 Jan 2025 13:18:40 GMT"
+          "Value": "Thu, 09 Jan 2025 16:16:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3362,7 +3362,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 09 Jan 2025 13:18:40 GMT"
+          "Value": "Thu, 09 Jan 2025 16:16:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7739,7 +7739,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1093"
+          "Value": "1092"
         },
         {
           "Name": "Content-Type",
@@ -7747,11 +7747,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"G6v7K4OCq0fht1HtApZR6KTaLc8fFUAJSXkqfGCHY5E=\""
+          "Value": "\"pQy/LWDBaCINYCzRL9Q5qdAkGdecMY5Gd0z4pWaL7oc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 09 Jan 2025 13:16:15 GMT"
+          "Value": "Thu, 09 Jan 2025 16:16:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7761,12 +7761,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-G6v7K4OCq0fht1HtApZR6KTaLc8fFUAJSXkqfGCHY5E="
+          "Value": "sha256-pQy/LWDBaCINYCzRL9Q5qdAkGdecMY5Gd0z4pWaL7oc="
         }
       ]
     },
     {
-      "Route": "js/arhiva.tqicjqdchk.js",
+      "Route": "js/arhiva.prscgc30z7.js",
       "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\arhiva.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -7776,7 +7776,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1093"
+          "Value": "1092"
         },
         {
           "Name": "Content-Type",
@@ -7784,11 +7784,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"G6v7K4OCq0fht1HtApZR6KTaLc8fFUAJSXkqfGCHY5E=\""
+          "Value": "\"pQy/LWDBaCINYCzRL9Q5qdAkGdecMY5Gd0z4pWaL7oc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 09 Jan 2025 13:16:15 GMT"
+          "Value": "Thu, 09 Jan 2025 16:16:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7798,7 +7798,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tqicjqdchk"
+          "Value": "prscgc30z7"
         },
         {
           "Name": "label",
@@ -7806,7 +7806,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-G6v7K4OCq0fht1HtApZR6KTaLc8fFUAJSXkqfGCHY5E="
+          "Value": "sha256-pQy/LWDBaCINYCzRL9Q5qdAkGdecMY5Gd0z4pWaL7oc="
         }
       ]
     },

@@ -185,8 +185,7 @@
               "ViewState": "AgIAAK0BAAAAAAAAAAAAwL8BAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-29T10:51:28.084Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -198,8 +197,7 @@
               "RelativeToolTip": "wwwroot\\css\\arhiva.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-01-09T10:39:16.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T10:39:16.378Z"
             },
             {
               "$type": "Document",
@@ -211,8 +209,7 @@
               "RelativeToolTip": "Views\\Arhiva\\Index.cshtml",
               "ViewState": "AgIAAE0AAAAAAAAAAAAAwFIAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-09T10:24:53.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T10:24:53.838Z"
             },
             {
               "$type": "Document",
@@ -224,8 +221,7 @@
               "RelativeToolTip": "Controllers\\ThreadController.cs",
               "ViewState": "AgIAAPAAAAAAAAAAAAAcwP0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T13:42:30.31Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T13:42:30.31Z"
             },
             {
               "$type": "Document",
@@ -250,8 +246,7 @@
               "RelativeToolTip": "Controllers\\PostareController.cs",
               "ViewState": "AgIAAAcBAAAAAAAAAAAUwBkBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T13:21:34.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T13:21:34.816Z"
             },
             {
               "$type": "Document",
@@ -263,8 +258,7 @@
               "RelativeToolTip": "Controllers\\ArhivaController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAqwBwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T13:21:47.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T13:21:47.902Z"
             },
             {
               "$type": "Document",

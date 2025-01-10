@@ -498,8 +498,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>tqicjqdchk</Fingerprint>
-      <Integrity>G6v7K4OCq0fht1HtApZR6KTaLc8fFUAJSXkqfGCHY5E=</Integrity>
+      <Fingerprint>prscgc30z7</Fingerprint>
+      <Integrity>pQy/LWDBaCINYCzRL9Q5qdAkGdecMY5Gd0z4pWaL7oc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\arhiva.js'))</OriginalItemSpec>

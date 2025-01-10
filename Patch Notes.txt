@@ -186,3 +186,5 @@
 	- Adaugare notificari pentru inceput de urmarire la conturile publice
 	- Admin-ul poate acum sa stearga thread-urile,postarile,comentariile altor useri
 	- Admin-ul poae vizualiza orice profil, chiar daca e privat
+09.01.2025
+	- Adaugare Arhiva si optiunea de arhivare pentru postari

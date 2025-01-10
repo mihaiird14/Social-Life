@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{39BFF346-A6CC-4ADF-BDBD-E714200FB2ED}|Social Life.csproj|c:\\users\\mihai\\onedrive\\desktop\\daw\\social life\\wwwroot\\js\\arhiva.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{39BFF346-A6CC-4ADF-BDBD-E714200FB2ED}|Social Life.csproj|solutionrelative:wwwroot\\js\\arhiva.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39BFF346-A6CC-4ADF-BDBD-E714200FB2ED}|Social Life.csproj|c:\\users\\mihai\\onedrive\\desktop\\daw\\social life\\wwwroot\\css\\arhiva.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{39BFF346-A6CC-4ADF-BDBD-E714200FB2ED}|Social Life.csproj|solutionrelative:wwwroot\\css\\arhiva.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{39BFF346-A6CC-4ADF-BDBD-E714200FB2ED}|Social Life.csproj|c:\\users\\mihai\\onedrive\\desktop\\daw\\social life\\controllers\\threadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39BFF346-A6CC-4ADF-BDBD-E714200FB2ED}|Social Life.csproj|solutionrelative:controllers\\threadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,14 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{39BFF346-A6CC-4ADF-BDBD-E714200FB2ED}|Social Life.csproj|c:\\users\\mihai\\onedrive\\desktop\\daw\\social life\\wwwroot\\css\\profilepostare.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{39BFF346-A6CC-4ADF-BDBD-E714200FB2ED}|Social Life.csproj|solutionrelative:wwwroot\\css\\profilepostare.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39BFF346-A6CC-4ADF-BDBD-E714200FB2ED}|Social Life.csproj|c:\\users\\mihai\\onedrive\\desktop\\daw\\social life\\wwwroot\\css\\arhiva.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{39BFF346-A6CC-4ADF-BDBD-E714200FB2ED}|Social Life.csproj|solutionrelative:wwwroot\\css\\arhiva.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39BFF346-A6CC-4ADF-BDBD-E714200FB2ED}|Social Life.csproj|c:\\users\\mihai\\onedrive\\desktop\\daw\\social life\\wwwroot\\js\\arhiva.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{39BFF346-A6CC-4ADF-BDBD-E714200FB2ED}|Social Life.csproj|solutionrelative:wwwroot\\js\\arhiva.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39BFF346-A6CC-4ADF-BDBD-E714200FB2ED}|Social Life.csproj|c:\\users\\mihai\\onedrive\\desktop\\daw\\social life\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -176,7 +176,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\Views\\Profile\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Profile\\Index.cshtml",
@@ -185,37 +185,23 @@
               "ViewState": "AgIAAK0BAAAAAAAAAAAAwL8BAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-29T10:51:28.084Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PostareController.cs",
-              "DocumentMoniker": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\Controllers\\PostareController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PostareController.cs",
-              "ToolTip": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\Controllers\\PostareController.cs*",
-              "RelativeToolTip": "Controllers\\PostareController.cs*",
-              "ViewState": "AgIAAAcBAAAAAAAAAAAUwBkBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T13:21:34.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "arhiva.css",
               "DocumentMoniker": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\arhiva.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\arhiva.css",
               "ToolTip": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\arhiva.css",
               "RelativeToolTip": "wwwroot\\css\\arhiva.css",
-              "ViewState": "AgIAACcAAAAAAAAAAAAIwDoAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-01-09T10:39:16.378Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\Views\\Arhiva\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Arhiva\\Index.cshtml",
@@ -223,25 +209,48 @@
               "RelativeToolTip": "Views\\Arhiva\\Index.cshtml",
               "ViewState": "AgIAAE0AAAAAAAAAAAAAwFIAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-09T10:24:53.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T10:24:53.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ThreadController.cs",
+              "DocumentMoniker": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\Controllers\\ThreadController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ThreadController.cs",
+              "ToolTip": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\Controllers\\ThreadController.cs",
+              "RelativeToolTip": "Controllers\\ThreadController.cs",
+              "ViewState": "AgIAAPAAAAAAAAAAAAAcwP0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T13:42:30.31Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ThreadController.cs",
-              "DocumentMoniker": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\Controllers\\ThreadController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ThreadController.cs",
-              "ToolTip": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\Controllers\\ThreadController.cs*",
-              "RelativeToolTip": "Controllers\\ThreadController.cs*",
-              "ViewState": "AgIAAPAAAAAAAAAAAAAcwP0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T13:42:30.31Z",
+              "Title": "arhiva.js",
+              "DocumentMoniker": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\arhiva.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\arhiva.js",
+              "ToolTip": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\arhiva.js",
+              "RelativeToolTip": "wwwroot\\js\\arhiva.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-01-09T10:55:31.965Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "PostareController.cs",
+              "DocumentMoniker": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\Controllers\\PostareController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PostareController.cs",
+              "ToolTip": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\Controllers\\PostareController.cs",
+              "RelativeToolTip": "Controllers\\PostareController.cs",
+              "ViewState": "AgIAAAcBAAAAAAAAAAAUwBkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T13:21:34.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ArhivaController.cs",
               "DocumentMoniker": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\Controllers\\ArhivaController.cs",
               "RelativeDocumentMoniker": "Controllers\\ArhivaController.cs",
@@ -249,12 +258,11 @@
               "RelativeToolTip": "Controllers\\ArhivaController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAqwBwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T13:21:47.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T13:21:47.902Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "profilePostare.css",
               "DocumentMoniker": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\profilePostare.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\profilePostare.css",
@@ -263,18 +271,6 @@
               "ViewState": "AgIAAKIAAAAAAAAAAAAAAKgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-01-09T10:07:38.18Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "arhiva.js",
-              "DocumentMoniker": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\arhiva.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\arhiva.js",
-              "ToolTip": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\arhiva.js",
-              "RelativeToolTip": "wwwroot\\js\\arhiva.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-01-09T10:55:31.965Z"
             },
             {
               "$type": "Document",
