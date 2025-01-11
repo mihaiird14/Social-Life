@@ -188,3 +188,6 @@
 	- Admin-ul poae vizualiza orice profil, chiar daca e privat
 09.01.2025
 	- Adaugare Arhiva si optiunea de arhivare pentru postari
+10.01.2025
+	- Fix bug afisare poze care sunt arhivate pe paginiile altor useri
+	- Fix bug care nu lasa un user sa urmareasca alt user, daca acesta il urmarea deja.

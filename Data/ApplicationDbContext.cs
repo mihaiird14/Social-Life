@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Build.Framework;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore;
 using Social_Life.Models;
 using System.Reflection.Emit;
 
@@ -24,10 +25,19 @@ namespace Social_Life.Data
         public DbSet<PostsComment> PostsComments { get; set; }
         public DbSet<PostCommentsLike> PostCommentsLikes { get; set; }
         public DbSet<Notification> Notifications { get; set; }
+        public DbSet<Grup> Grups { get; set; }
+        public DbSet<Grup_Membrii> Grup_Membriis { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
 
             base.OnModelCreating(builder);
+            builder.Entity<Grup_Membrii>()
+            .HasKey(ab => new
+            {
+                ab.Id,
+                ab.UserId,
+                ab.GrupId
+            });
             builder.Entity<Profile>(entity =>
             {
                 entity.HasKey(p => p.Id_User);
@@ -134,6 +144,15 @@ namespace Social_Life.Data
                 .WithMany(p => p.Notifications)
                 .HasForeignKey(n => n.Id_User)
                 .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Grup_Membrii>()
+                .HasOne(n => n.Profile)
+                .WithMany(x => x.GrupuriMembru)
+                .HasForeignKey(n => n.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Grup_Membrii>()
+                .HasOne(n => n.Grup)
+                .WithMany(x => x.GrupMembrii)
+                .HasForeignKey(n => n.GrupId);
         }
     }
 }

@@ -1,0 +1,264 @@
+﻿@model Profile;
+@{
+
+    var results = TempData["RezultateSearch"] as IEnumerable<int>;
+
+}
+@inject UserManager<ApplicationUser> UserManager
+@using System.Security.Claims
+@using Newtonsoft.Json;
+@inject ApplicationDbContext db
+@{
+    var user_Id = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+    var profile = db.Profiles.FirstOrDefault(p => p.Id_User == user_Id);
+}
+@{
+    ApplicationUser currentUser = null;
+
+    if (User.Identity.IsAuthenticated)
+    {
+        var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        currentUser = await UserManager.FindByIdAsync(userId);
+    }
+}
+@using Microsoft.AspNetCore.Identity
+@using Social_Life.Data
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SOCIAL LIFE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/profil.css">
+    <link rel="stylesheet" href="css/AddGrup.css">
+    <link rel="stylesheet" href="css/Search.css">
+    <style>
+        .pozaPostata:hover {
+        transform: scale(1.1);
+        }
+
+        #liked {
+        color: green;
+        }
+
+        #dislked {
+        color: white;
+        }
+
+        i[liked="liked"] {
+        color: green;
+        }
+
+        i[liked="disliked"] {
+        color: white;
+        }
+
+        ::-webkit-scrollbar {
+        width: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+        background-color: #00ffcc;
+        border-radius: 5px;
+        width: 6px;
+        height: 40px;
+        }
+
+        ::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 20px;
+        }
+
+        scrollbar-width: thin;
+        scrollbar-color: #00ffcc transparent;</style>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <style>
+            #user {
+            margin-top: 4.3vh;
+            }
+
+            #NumeUser {
+            margin-top: -27vh;
+            }
+
+            #Stats {
+            margin-top: -1vh;
+            }
+        </style>
+    }
+    else
+    {
+        <style>
+            #Privat {
+            visibility: hidden;
+            }
+
+            #NumeUser {
+            margin-top: -24vh;
+            }
+        </style>
+    }
+</head>
+<body>
+
+    @if (TempData["EditTh"] != null)
+    {
+        <div id="eroare">
+            @TempData["EditTh"]
+        </div>
+    }
+    <div id="header">
+        <img id="logo" src="imagini/logoAlb.png">
+    </div>
+    <div class="sideMenu">
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <div id="buton1">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <a href="#">FOR YOU</a>
+            </div>
+            <div id="buton">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <a href="@Url.Action("Search1", "Search")">CAUTĂ</a>
+            </div>
+            <div id="buton">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="@Url.Action("Index", "Profile")">PROFIL</a>
+            </div>
+            <div id="buton">
+                <i class="fa fa-users" aria-hidden="true"></i>
+                <a href="@Url.Action("Index", "CautaGrup")">GRUPURI</a>
+            </div>
+            <div id="buton">
+                <a href="Identity/Account/Logout">DECONECTEAZĂ-TE</a>
+            </div>
+        }
+        else
+        {
+            <div id="buton1">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <a href="/Identity/Account/Login">AUTENTIFICARE</a>
+            </div>
+            <div id="buton">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <a href="@Url.Action("Search1", "Search")">CAUTĂ</a>
+            </div>
+        }
+    </div>
+    <div id="AddGrup" onclick="afisFormGrup()">
+        Creează Grup
+    </div>
+
+    @if (@currentUser != null)
+    {
+        <form id="grtale" asp-controller="CautaGrup" asp-action="Search_Id">
+            <input type="hidden" class="form-control" name="Id" placeholder="Cauta..." value="@currentUser.Id" />
+            <button class="btn btn-primary" type="submit">Grupurile Tale</button>
+        </form>
+        <form id="SearchBox" method="get" asp-controller="CautaGrup" asp-action="Search">
+            <div class="input-group mb-3">
+                <input id="SearchChenar" type="text" class="form-control" name="query" placeholder="Cauta..." value="@ViewBag.Query" />
+                <button class="btn btn-primary" type="submit"><i id="SearchIcon" class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+        </form>
+        <div id="formAddGrup">
+            <i onclick="xAddGrup()" id="xAddGrup" class="fa-solid fa-x" aria-hidden="true"></i>
+            <br />
+
+            <form method="post" asp-controller="CautaGrup" asp-action="New" enctype="multipart/form-data">
+                <input type="hidden" name="AdminGrupId" value="@currentUser.Id" />
+                <label>Numele Grupului</label>
+                <br />
+                <br />
+                <input id="GrNume" name="GrupName" type="text" />
+                <br />
+                <br />
+                <label>Imagine Grup</label>
+                <br />
+                <br />
+                <img id="pozaGr" src="/imagini/grupDefault.png" />
+                <br />
+                <div id="butoanePoza">
+                    <input id="PozaInput" name="GrupImagine" class="form-control" type="file" accept="image/*" />
+                    <div id="DeleteButton" onclick="StergePoza()">Șterge Poza</div>
+                </div>
+                <br />
+                <br />
+                <label>Vizibilitate</label>
+                <br />
+                <br />
+                <label>
+                    <input type="radio" name="GrupPublic" value="Public" checked />Public
+                </label>
+                <label>
+                    <input type="radio" name="GrupPublic" value="Privat" />Privat
+                </label>
+                <br />
+                <br />
+                <button id="addBtnGr" type="submit">Creează!</button>
+                <br />
+                <br />
+            </form>
+        </div>
+    }
+    @if (results == null || !results.Any())
+    {
+
+        @if (TempData["nu"] == "nu")
+        {
+            <img id="noGr" src="imagini/noArhiva.png" />
+        }
+        else{
+        <div id="listaGrupuriMembru">
+            @foreach (var g in db.Grups.Take(20).OrderByDescending(x=>x.DataGr))
+            {
+                <a href="@Url.Action("Index", "Grup", new { GrupId = @g.GrupId })">
+                    <div id="detaliiGrup">
+                        <img src="@g.GrupImagine" />
+                        <h4>@g.GrupName</h4>
+                    </div>
+                </a>
+            }
+
+        </div>
+        }
+    }
+    else{
+        <div id="listaGrupuriMembru">
+            @foreach (var g in results)
+            {
+                var grup = db.Grups.FirstOrDefault(x => x.GrupId==g);
+                <a href="@Url.Action("Index", "Grup", new { GrupId = @grup.GrupId })">
+                    <div id="detaliiGrup">
+                        <img src="@grup.GrupImagine" />
+                        <h4>@grup.GrupName</h4>
+                    </div>
+                </a>
+            }
+
+        </div>
+    }
+    <script src="js/grup.js"></script>
+    <script>
+        const imageUpload = document.getElementById('PozaInput');
+        const imagePreview = document.getElementById('pozaGr');
+
+        imageUpload.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>

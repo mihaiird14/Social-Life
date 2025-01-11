@@ -20,6 +20,7 @@ namespace Social_Life.Models
         public DateTime Date { get; set; }
         public bool Edited { get; set; } = false;
         public bool Arhivat { get; set; } = false;
+        public string? VideoUrl { get; set; }
         public virtual Profile Profile { set; get; }
         public virtual ICollection<ThreadLike>? Likes { get; set; }
         public virtual ICollection<ThreadComment>? Comments { get; set; }

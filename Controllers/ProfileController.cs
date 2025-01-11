@@ -66,22 +66,38 @@ namespace Social_Life.Controllers
                 var userId = _userManager.GetUserId(User);
                 thread.Id_User = userId;
                 thread.Date = DateTime.Now;
-                if(thread.ThreadText.Length<5 || thread.ThreadText.Length > 100)
-                {
+                if (thread.ThreadText.Length < 5 || thread.ThreadText.Length > 100)
+        {
                     TempData["ErrorMessage"] = "Textul trebuie sa fie intre 5 si 100 caractere";
                     return RedirectToAction("Index", "Profile");
+                }
+                if (!string.IsNullOrWhiteSpace(thread.VideoUrl))
+                {
+                    Uri uriResult;
+                    bool isValidUrl = Uri.TryCreate(thread.VideoUrl, UriKind.Absolute, out uriResult)
+                                      && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
+
+                    if (!isValidUrl)
+                    {
+                        ViewBag.ErrorMessage = "Link-ul către videoclip nu este valid.";
+                        return View(thread);
+                    }
+                    if (thread.VideoUrl.Contains("watch?v="))
+                    {
+                        thread.VideoUrl = thread.VideoUrl.Replace("watch?v=", "embed/");
+                    }
                 }
                 db.Threads.Add(thread);
                 db.SaveChanges();
                 TempData["ErrorMessage"] = null;
                 return RedirectToAction("Index");
-                
+
             }
 
             catch
             {
                 TempData["ErrorMessage"] = "Textul trebuie sa fie intre 5 si 100 caractere";
-                return RedirectToAction("Index","Profile");
+                return RedirectToAction("Index", "Profile");
             }
         }
         [HttpPost]

@@ -1,0 +1,156 @@
+#AddGrup {
+    position:absolute;
+    background: transparent;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 25px;
+    margin-left: 83vw;
+    margin-top: 0vh;
+    outline: none;
+    color: white;
+    transition: color 0.3s 0.1s ease-out;
+    width: 10vw;
+    height: 36px;
+    text-align: center;
+    align-content: center;
+}
+#grtale {
+    position: absolute;
+    background: transparent;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 25px;
+    margin-left: 70vw;
+    margin-top: 0vh;
+    outline: none;
+    color: white;
+    transition: color 0.3s 0.1s ease-out;
+    width: 10vw;
+    height: 36px;
+    text-align: center;
+    align-content: center;
+}
+#grtale button{
+    color: white;
+}
+    #AddGrup:hover, #grtale:hover, #grtale:hover button {
+        color: #36353d;
+        border: 1px solid white;
+        background-color: white;
+    }
+#formAddGrup {
+    display: none;
+    margin-left: 27vw;
+    border: 1px solid #00ffcc;
+    width: 60vw;
+}
+#formAddGrup label{
+    color: white;
+}
+#xAddGrup{
+    position: absolute;
+    margin-left: 57vw;
+}
+#xAddGrup:hover {
+    color: red;
+}
+#formAddGrup form{
+    position: relative;
+    margin-top: 5vh;
+    margin-left: 15vw;
+}
+#GrNume {
+    border: 1px solid white;
+    background: none;
+    width: 25vw;
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    overflow-wrap: break-word;
+    height: 5vh;
+}
+#pozaGr{
+    width: 30vw;
+    height: 20vh;
+}
+input[type="file"]::file-selector-button {
+    background: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+    width: 10vw;
+    height: 5vh;
+}
+
+    input[type="file"]::file-selector-button:hover {
+        color: #36353d;
+        border: 1px solid white;
+        background-color: white;
+    }
+
+input[type="file"] {
+    color: #1a1a1a
+}
+#DeleteButton {
+    background: transparent;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 25px;
+    outline: none;
+    color: white;
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+    align-content: center;
+    width: 10vw;
+    height: 5vh;
+}
+#butoanePoza{
+    display: flex;
+    margin-left: -4vw;
+}
+#DeleteButton:hover {
+    color: #36353d;
+    border: 1px solid white;
+    background-color: white;
+}
+#addBtnGr {
+    background: transparent;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 25px;
+    outline: none;
+    color: white;
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+    align-content: center;
+    width: 10vw;
+    height: 5vh;
+}
+#addBtnGr:hover {
+    color: #36353d;
+    border: 1px solid white;
+    background-color: white;
+}
+#listaGrupuriMembru {
+    width: 70vw;
+    margin-left: 20vw;
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+#listaGrupuriMembru img{
+    height: 20vh;
+    width: 100%;
+}
+#detaliiGrup{
+    border: 2px solid white;
+    text-align: center;
+    color: white;
+}

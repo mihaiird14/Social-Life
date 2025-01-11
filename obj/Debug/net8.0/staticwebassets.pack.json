@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Social Life.02d5h0qjqq.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\AddGrup.css",
+      "PackagePath": "staticwebassets\\css\\AddGrup.css"
+    },
+    {
       "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\CommentBox.css",
       "PackagePath": "staticwebassets\\css\\CommentBox.css"
     },
@@ -27,6 +31,10 @@
     {
       "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\fisaUrmaritori.css",
       "PackagePath": "staticwebassets\\css\\fisaUrmaritori.css"
+    },
+    {
+      "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\grup.css",
+      "PackagePath": "staticwebassets\\css\\grup.css"
     },
     {
       "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\login.css",
@@ -73,12 +81,28 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\grupuri\\1.jpg",
+      "PackagePath": "staticwebassets\\grupuri\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\grupuri\\CONCEPTUALA.png",
+      "PackagePath": "staticwebassets\\grupuri\\CONCEPTUALA.png"
+    },
+    {
+      "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\grupuri\\images.jpg",
+      "PackagePath": "staticwebassets\\grupuri\\images.jpg"
+    },
+    {
       "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\imagini\\1.jpg",
       "PackagePath": "staticwebassets\\imagini\\1.jpg"
     },
     {
       "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\imagini\\Captură de ecran 2024-11-01 193833.png",
       "PackagePath": "staticwebassets\\imagini\\Captură de ecran 2024-11-01 193833.png"
+    },
+    {
+      "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\imagini\\grupDefault.png",
+      "PackagePath": "staticwebassets\\imagini\\grupDefault.png"
     },
     {
       "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\imagini\\logoAlb.png",
@@ -123,6 +147,10 @@
     {
       "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\fisaUrmaritori.js",
       "PackagePath": "staticwebassets\\js\\fisaUrmaritori.js"
+    },
+    {
+      "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\grup.js",
+      "PackagePath": "staticwebassets\\js\\grup.js"
     },
     {
       "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\postare.js",

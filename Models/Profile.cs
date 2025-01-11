@@ -30,5 +30,6 @@ namespace Social_Life.Models
         public virtual ICollection<PostsComment>?PostsComments { get; set; }
         public virtual ICollection<PostCommentsLike> Post_Com_Likes { get; set; }
         public virtual ICollection<Notification>? Notifications { get; set; }
+        public virtual ICollection<Grup_Membrii>? GrupuriMembru { get; set; }
     }
 }

@@ -263,6 +263,69 @@ namespace Social_Life.Migrations
                     b.ToTable("Follows");
                 });
 
+            modelBuilder.Entity("Social_Life.Models.Grup", b =>
+                {
+                    b.Property<int>("GrupId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GrupId"));
+
+                    b.Property<string>("AdminGrupId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DataGr")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("GrupImagine")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GrupName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("GrupPublic")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ProfileId_User")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("GrupId");
+
+                    b.HasIndex("ProfileId_User");
+
+                    b.ToTable("Grups");
+                });
+
+            modelBuilder.Entity("Social_Life.Models.Grup_Membrii", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("GrupId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Data")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id", "UserId", "GrupId");
+
+                    b.HasIndex("GrupId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Grup_Membriis");
+                });
+
             modelBuilder.Entity("Social_Life.Models.Notification", b =>
                 {
                     b.Property<int>("NotificationId")
@@ -507,6 +570,9 @@ namespace Social_Life.Migrations
                         .HasMaxLength(400)
                         .HasColumnType("nvarchar(400)");
 
+                    b.Property<string>("VideoUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("ThreadId");
 
                     b.HasIndex("Id_User");
@@ -675,6 +741,36 @@ namespace Social_Life.Migrations
                     b.Navigation("Urmaritor");
                 });
 
+            modelBuilder.Entity("Social_Life.Models.Grup", b =>
+                {
+                    b.HasOne("Social_Life.Models.Profile", "Profile")
+                        .WithMany()
+                        .HasForeignKey("ProfileId_User")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Profile");
+                });
+
+            modelBuilder.Entity("Social_Life.Models.Grup_Membrii", b =>
+                {
+                    b.HasOne("Social_Life.Models.Grup", "Grup")
+                        .WithMany("GrupMembrii")
+                        .HasForeignKey("GrupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Social_Life.Models.Profile", "Profile")
+                        .WithMany("GrupuriMembru")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Grup");
+
+                    b.Navigation("Profile");
+                });
+
             modelBuilder.Entity("Social_Life.Models.Notification", b =>
                 {
                     b.HasOne("Social_Life.Models.Profile", "Profile1")
@@ -839,6 +935,11 @@ namespace Social_Life.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Social_Life.Models.Grup", b =>
+                {
+                    b.Navigation("GrupMembrii");
+                });
+
             modelBuilder.Entity("Social_Life.Models.Postare", b =>
                 {
                     b.Navigation("Comments");
@@ -856,6 +957,8 @@ namespace Social_Life.Migrations
                     b.Navigation("Comment_Likes");
 
                     b.Navigation("Comments");
+
+                    b.Navigation("GrupuriMembru");
 
                     b.Navigation("LikedPosts");
 

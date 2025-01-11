@@ -1,8 +1,10 @@
+wwwroot\css\AddGrup.css
 wwwroot\css\arhiva.css
 wwwroot\css\aut.css
 wwwroot\css\CommentBox.css
 wwwroot\css\editThread.css
 wwwroot\css\fisaUrmaritori.css
+wwwroot\css\grup.css
 wwwroot\css\login.css
 wwwroot\css\logout.css
 wwwroot\css\notificari.css
@@ -15,8 +17,12 @@ wwwroot\css\setari.css
 wwwroot\css\site.css
 wwwroot\css\threadForm.css
 wwwroot\favicon.ico
+wwwroot\grupuri\1.jpg
+wwwroot\grupuri\CONCEPTUALA.png
+wwwroot\grupuri\images.jpg
 wwwroot\imagini\1.jpg
 wwwroot\imagini\Captură de ecran 2024-11-01 193833.png
+wwwroot\imagini\grupDefault.png
 wwwroot\imagini\logoAlb.png
 wwwroot\imagini\logoPozeAlb.png
 wwwroot\imagini\noArhiva.png
@@ -28,6 +34,7 @@ wwwroot\imagini\thread.png
 wwwroot\js\arhiva.js
 wwwroot\js\CommentBox.js
 wwwroot\js\fisaUrmaritori.js
+wwwroot\js\grup.js
 wwwroot\js\postare.js
 wwwroot\js\profil.js
 wwwroot\js\site.js

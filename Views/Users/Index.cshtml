@@ -169,7 +169,7 @@
             @{
                 var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 var urmareste = db.Follows.Any(f => f.Id_Urmaritor == currentUserId && f.Id_Urmarit == Model.Id_User);
-                var asteptare = db.Notifications.Any(n => n.Id_User == Model.Id_User && n.Id_User2 == currentUserId && !n.Accepted);
+                var asteptare = db.Notifications.Any(n => n.NotificationType == "FollowRequest12" && n.Id_User == Model.Id_User && n.Id_User2 == currentUserId && !n.Accepted);
             }
 
             <form method="post" asp-controller="Follow" asp-action="ToggleFollow">
@@ -205,7 +205,7 @@
         <div id="Stats">
             <div id="Vizibile">
                 <div id="Postari">
-                    <h4 id="HV">@(db.Postari.Where(t => t.UserId == Model.Id_User).Count())</h4>
+                    <h4 id="HV">@(db.Postari.Where(t => t.UserId == Model.Id_User && t.Arhivat==false).Count())</h4>
                     <h4 id="HV">POSTĂRI</h4>
                 </div>
                 <div id="Urmaritori">
@@ -219,7 +219,7 @@
             </div>
             <div id="Visible2">
                 <div id="GrupStats">
-                    <h4 id="HV">0</h4>
+                    <h4 id="HV">@db.Grup_Membriis.Where(x => x.UserId == Model.Id_User).Count()</h4>
                     <h4 id="HV">GRUPURI</h4>
                 </div>
                 <div id="NoteStats">
@@ -242,7 +242,7 @@
                 <p onclick="afisPagina3()">THREADS</p>
             </div>
             <div id="PostariPage">
-                @if (ViewBag.NrPostari == 0)
+                @if (ViewBag.NrPostari == 0 || db.Postari.Where(t => t.UserId == Model.Id_User && t.Arhivat == false).Count()==0)
                 {
                     <img id="nuPoze" src="imagini/logoPozeAlb.png">
                     <h3 id="nuPozeText">NU ARE POZE ÎNCĂRCATE!</h3>
@@ -250,7 +250,7 @@
                 else
                 {
                     <div class="grid-container">
-                        @foreach (var postare in db.Postari.Where(t => t.UserId == Model.Id_User).OrderByDescending(t => t.Data))
+                        @foreach (var postare in db.Postari.Where(t => t.UserId == Model.Id_User && t.Arhivat==false).OrderByDescending(t => t.Data))
                         {
                             <div class="pozaPostata" id="postare-@postare.Id" onclick="arataPostareDetaliata(@postare.Id)">
 

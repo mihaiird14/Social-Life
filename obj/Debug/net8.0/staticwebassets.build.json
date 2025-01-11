@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OEi9oBwfk6P3PiF+ntc8drt83FYyNwQR7oN149T2kqw=",
+  "Hash": "RW9CMB2n8iXZ/C8DF2u2az3QT5vc87tx0jTESWosisU=",
   "Source": "Social Life",
   "BasePath": "_content/Social Life",
   "Mode": "Default",
@@ -1319,6 +1319,27 @@
       "OriginalItemSpec": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Social Life.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\AddGrup.css",
+      "SourceId": "Social Life",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\",
+      "BasePath": "_content/Social Life",
+      "RelativePath": "css/AddGrup#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g37zlb3a3e",
+      "Integrity": "rP++aS747XMob+8jRZ5IYqFieBOdlE3L9yCyLh6TIN0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\AddGrup.css"
+    },
+    {
       "Identity": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\arhiva.css",
       "SourceId": "Social Life",
       "SourceType": "Discovered",
@@ -1422,6 +1443,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\fisaUrmaritori.css"
+    },
+    {
+      "Identity": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\grup.css",
+      "SourceId": "Social Life",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\",
+      "BasePath": "_content/Social Life",
+      "RelativePath": "css/grup#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "egocn3uzud",
+      "Integrity": "zgnfG99wSIJrVc/WuacHHEIJk/r8D0NnNafIOhUOWNM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\grup.css"
     },
     {
       "Identity": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\login.css",
@@ -1676,6 +1718,69 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\grupuri\\1.jpg",
+      "SourceId": "Social Life",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\",
+      "BasePath": "_content/Social Life",
+      "RelativePath": "grupuri/1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4qp9mx5dk3",
+      "Integrity": "hIvhTDkJzw3emJkqH2op8Y5DC3XncvHpOKJJtT5481w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\grupuri\\1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\grupuri\\CONCEPTUALA.png",
+      "SourceId": "Social Life",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\",
+      "BasePath": "_content/Social Life",
+      "RelativePath": "grupuri/CONCEPTUALA#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qleclae2t5",
+      "Integrity": "Ei4CiA78uSWVSt8Km0wQgCRFgpy/513SQJAnkpmD0aY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\grupuri\\CONCEPTUALA.png"
+    },
+    {
+      "Identity": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\grupuri\\images.jpg",
+      "SourceId": "Social Life",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\",
+      "BasePath": "_content/Social Life",
+      "RelativePath": "grupuri/images#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mxdmym0tcr",
+      "Integrity": "9lV5bQoL+jPULuyFnEGNPlPlvWwnjnSUZfiORRlWrS8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\grupuri\\images.jpg"
+    },
+    {
       "Identity": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\imagini\\1.jpg",
       "SourceId": "Social Life",
       "SourceType": "Discovered",
@@ -1716,6 +1821,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagini\\Captură de ecran 2024-11-01 193833.png"
+    },
+    {
+      "Identity": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\imagini\\grupDefault.png",
+      "SourceId": "Social Life",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\",
+      "BasePath": "_content/Social Life",
+      "RelativePath": "imagini/grupDefault#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ycrv65qbyf",
+      "Integrity": "vgkodYcVmZTP1dX4tWj8to7p3cdFUSEEs2iZWdeIvj4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagini\\grupDefault.png"
     },
     {
       "Identity": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\imagini\\logoAlb.png",
@@ -1947,6 +2073,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\fisaUrmaritori.js"
+    },
+    {
+      "Identity": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\grup.js",
+      "SourceId": "Social Life",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\",
+      "BasePath": "_content/Social Life",
+      "RelativePath": "js/grup#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "koidt188hn",
+      "Integrity": "LP9MOCqkWk2eAMv+50SpgRiWSPHP86qGUxmdHODrIwk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\grup.js"
     },
     {
       "Identity": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\postare.js",
@@ -3295,6 +3442,88 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/AddGrup.css",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\AddGrup.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3297"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rP++aS747XMob+8jRZ5IYqFieBOdlE3L9yCyLh6TIN0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Jan 2025 14:12:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rP++aS747XMob+8jRZ5IYqFieBOdlE3L9yCyLh6TIN0="
+        }
+      ]
+    },
+    {
+      "Route": "css/AddGrup.g37zlb3a3e.css",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\AddGrup.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3297"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rP++aS747XMob+8jRZ5IYqFieBOdlE3L9yCyLh6TIN0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Jan 2025 14:12:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g37zlb3a3e"
+        },
+        {
+          "Name": "label",
+          "Value": "css/AddGrup.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rP++aS747XMob+8jRZ5IYqFieBOdlE3L9yCyLh6TIN0="
+        }
+      ]
+    },
+    {
       "Route": "css/arhiva.3gml14jv0h.css",
       "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\arhiva.css",
       "Selectors": [],
@@ -3701,6 +3930,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-oSEiFVEhRgHZIrw+xwH/i3xdNTOlIpAfhUIdPSZgt4U="
+        }
+      ]
+    },
+    {
+      "Route": "css/grup.css",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\grup.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zgnfG99wSIJrVc/WuacHHEIJk/r8D0NnNafIOhUOWNM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Jan 2025 15:06:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zgnfG99wSIJrVc/WuacHHEIJk/r8D0NnNafIOhUOWNM="
+        }
+      ]
+    },
+    {
+      "Route": "css/grup.egocn3uzud.css",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\grup.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zgnfG99wSIJrVc/WuacHHEIJk/r8D0NnNafIOhUOWNM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Jan 2025 15:06:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "egocn3uzud"
+        },
+        {
+          "Name": "label",
+          "Value": "css/grup.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zgnfG99wSIJrVc/WuacHHEIJk/r8D0NnNafIOhUOWNM="
         }
       ]
     },
@@ -4685,6 +4996,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-alBUZYEF6kqek7icPHHd90EXSkyPC6SLN0neaBYhnck="
+        }
+      ]
+    },
+    {
+      "Route": "grupuri/1.4qp9mx5dk3.jpg",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\grupuri\\1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "126217"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hIvhTDkJzw3emJkqH2op8Y5DC3XncvHpOKJJtT5481w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Jan 2025 13:37:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4qp9mx5dk3"
+        },
+        {
+          "Name": "label",
+          "Value": "grupuri/1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hIvhTDkJzw3emJkqH2op8Y5DC3XncvHpOKJJtT5481w="
+        }
+      ]
+    },
+    {
+      "Route": "grupuri/1.jpg",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\grupuri\\1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "126217"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hIvhTDkJzw3emJkqH2op8Y5DC3XncvHpOKJJtT5481w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Jan 2025 13:37:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hIvhTDkJzw3emJkqH2op8Y5DC3XncvHpOKJJtT5481w="
+        }
+      ]
+    },
+    {
+      "Route": "grupuri/CONCEPTUALA.png",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\grupuri\\CONCEPTUALA.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "64090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ei4CiA78uSWVSt8Km0wQgCRFgpy/513SQJAnkpmD0aY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Jan 2025 10:13:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ei4CiA78uSWVSt8Km0wQgCRFgpy/513SQJAnkpmD0aY="
+        }
+      ]
+    },
+    {
+      "Route": "grupuri/CONCEPTUALA.qleclae2t5.png",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\grupuri\\CONCEPTUALA.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "64090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ei4CiA78uSWVSt8Km0wQgCRFgpy/513SQJAnkpmD0aY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Jan 2025 10:13:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qleclae2t5"
+        },
+        {
+          "Name": "label",
+          "Value": "grupuri/CONCEPTUALA.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ei4CiA78uSWVSt8Km0wQgCRFgpy/513SQJAnkpmD0aY="
+        }
+      ]
+    },
+    {
+      "Route": "grupuri/images.jpg",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\grupuri\\images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8808"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9lV5bQoL+jPULuyFnEGNPlPlvWwnjnSUZfiORRlWrS8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Jan 2025 15:04:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9lV5bQoL+jPULuyFnEGNPlPlvWwnjnSUZfiORRlWrS8="
+        }
+      ]
+    },
+    {
+      "Route": "grupuri/images.mxdmym0tcr.jpg",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\grupuri\\images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8808"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9lV5bQoL+jPULuyFnEGNPlPlvWwnjnSUZfiORRlWrS8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Jan 2025 15:04:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mxdmym0tcr"
+        },
+        {
+          "Name": "label",
+          "Value": "grupuri/images.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9lV5bQoL+jPULuyFnEGNPlPlvWwnjnSUZfiORRlWrS8="
         }
       ]
     },
@@ -6931,7 +7488,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 09 Jan 2025 10:30:25 GMT"
+          "Value": "Sat, 11 Jan 2025 11:50:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6976,7 +7533,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 09 Jan 2025 10:30:25 GMT"
+          "Value": "Sat, 11 Jan 2025 11:50:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7069,6 +7626,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-10pjvv6yOQofsVDBXdBvwlb87UGQtGFh2MAr0oXRo1E="
+        }
+      ]
+    },
+    {
+      "Route": "imagini/grupDefault.png",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\imagini\\grupDefault.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3647"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vgkodYcVmZTP1dX4tWj8to7p3cdFUSEEs2iZWdeIvj4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Jan 2025 09:00:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vgkodYcVmZTP1dX4tWj8to7p3cdFUSEEs2iZWdeIvj4="
+        }
+      ]
+    },
+    {
+      "Route": "imagini/grupDefault.ycrv65qbyf.png",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\imagini\\grupDefault.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3647"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vgkodYcVmZTP1dX4tWj8to7p3cdFUSEEs2iZWdeIvj4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Jan 2025 09:00:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ycrv65qbyf"
+        },
+        {
+          "Name": "label",
+          "Value": "imagini/grupDefault.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vgkodYcVmZTP1dX4tWj8to7p3cdFUSEEs2iZWdeIvj4="
         }
       ]
     },
@@ -7971,6 +8610,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-im7G7mKZcEoNoEO1suJl/wINM+fq9VYezjZLYpaAWLA="
+        }
+      ]
+    },
+    {
+      "Route": "js/grup.js",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\grup.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "331"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LP9MOCqkWk2eAMv+50SpgRiWSPHP86qGUxmdHODrIwk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Jan 2025 09:14:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LP9MOCqkWk2eAMv+50SpgRiWSPHP86qGUxmdHODrIwk="
+        }
+      ]
+    },
+    {
+      "Route": "js/grup.koidt188hn.js",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\grup.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "331"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LP9MOCqkWk2eAMv+50SpgRiWSPHP86qGUxmdHODrIwk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Jan 2025 09:14:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "koidt188hn"
+        },
+        {
+          "Name": "label",
+          "Value": "js/grup.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LP9MOCqkWk2eAMv+50SpgRiWSPHP86qGUxmdHODrIwk="
         }
       ]
     },
@@ -12999,7 +13720,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 09 Jan 2025 10:23:59 GMT"
+          "Value": "Sat, 11 Jan 2025 07:36:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13036,7 +13757,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 09 Jan 2025 10:23:59 GMT"
+          "Value": "Sat, 11 Jan 2025 07:36:18 GMT"
         },
         {
           "Name": "Cache-Control",
