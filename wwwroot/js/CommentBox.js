@@ -1,5 +1,4 @@
 ﻿function CommentBox(event, id) {
-    xFollow();
     if (event != null) {
         event.preventDefault();
     }
@@ -21,8 +20,6 @@
     BoxPoza.setAttribute("src", poza.getAttribute("src"));
     BoxText.querySelector("#username").innerHTML = nume.innerHTML;
     BoxText.querySelector("#ComOra").innerHTML = th[0].querySelector("#ora").innerHTML;
-    sessionStorage.setItem('Comentarii', 'da');
-    sessionStorage.setItem('Id', id);
 }
 function  xCom(id){
     document.getElementById("CommentBox-"+id).style.display = 'none';

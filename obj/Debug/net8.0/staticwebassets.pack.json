@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\css\\fisaUrmaritori.css"
     },
     {
+      "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\fyp.css",
+      "PackagePath": "staticwebassets\\css\\fyp.css"
+    },
+    {
       "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\grup.css",
       "PackagePath": "staticwebassets\\css\\grup.css"
     },
@@ -147,6 +151,10 @@
     {
       "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\fisaUrmaritori.js",
       "PackagePath": "staticwebassets\\js\\fisaUrmaritori.js"
+    },
+    {
+      "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\fyp.js",
+      "PackagePath": "staticwebassets\\js\\fyp.js"
     },
     {
       "Id": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\grup.js",

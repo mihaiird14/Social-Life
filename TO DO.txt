@@ -1,0 +1,12 @@
+PROFIL
+	- adaugare functionalitate "Report" pentru comentarii, thread-uri, postari, useri
+	- posibilitatea de a sterge/dezactiva contul
+
+ADMIN
+	- meniu special cu toate thread-urile/comentariile/postarile/useri care au fost raportati
+	- posibilitate de a sterge useri (sau dezactiva conturi)
+
+GRUPURI
+	- posibilitatea de a intra intr-un grup public/ asteptare cerere confirmare de la admin grup ptr a intra
+	- postari in grup
+	- orice alta operatie ca la postari: sterge, comentarii, like, report

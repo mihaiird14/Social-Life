@@ -52,6 +52,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\ForYou\" />
     <Folder Include="Views\Notification\" />
   </ItemGroup>
 

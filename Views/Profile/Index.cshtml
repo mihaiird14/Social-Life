@@ -107,7 +107,7 @@
         {
             <div id="buton1">
                 <i class="fa fa-home" aria-hidden="true"></i>
-                <a href="#">FOR YOU</a>
+                <a asp-controller="ForYou" asp-action="Index">FOR YOU</a>
             </div>
             <div id="buton">
                 <i class="fa fa-search" aria-hidden="true"></i>
@@ -412,7 +412,8 @@
                 <label  asp-for="ThreadText" class="note-label">ADAUGĂ UN THREAD</label>
                 <textarea asp-for ="ThreadText" id="note" class="note-textarea" placeholder="Scrie un thread..." name="ThreadText"></textarea>
                 <label asp-for="VideoUrl" class="note-label">Adaugă un link către un videoclip (opțional)</label>
-                <input asp-for="VideoUrl" type="url" class="form-control" placeholder="https://www.youtube.com/watch?v=..." name="VideoUrl" />
+                <input asp-for="VideoUrl" type="url" class="form-control" placeholder="Link..." name="VideoUrl" />
+                <br />
                 @if (ViewBag.ErrorMessage != null){
                     <span asp-validation-for="ThreadText" class="text-danger"> @ViewBag.ErrorMessage</span>
                 }
@@ -467,8 +468,8 @@
 
                                 var embedUrl = thread.VideoUrl.Replace("watch?v=", "embed/");
                                 <div class="thread-video">
-                                    <iframe width="490"
-                                            height="315"
+                                    <iframe
+                       
                                             src="@embedUrl"
                                             title="YouTube video player"
                                             frameborder="0"
@@ -528,6 +529,19 @@
                                 <img alt="Profil" id="comImg">
                                 <p id="username"></p>
                                 <p id="continut"></p>
+                                @if (!string.IsNullOrEmpty(thread.VideoUrl))
+                                {
+
+                                    var embedUrl = thread.VideoUrl.Replace("watch?v=", "embed/");
+                                    <div class="thread-video">
+                                        <iframe src="@embedUrl"
+                                                title="YouTube video player"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                }
                                 <p id="ComOra"></p>
                             </div>
                             <form id="formCom" asp-controller="Thread" asp-action="NewCom" >

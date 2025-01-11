@@ -86,7 +86,7 @@
             <h4>Setați profilul dumneavoastră pe modul <b>privat</b>
                 @{
                     var isPublic = profile.ProfilPublic;
-                    <form asp-action="SetarePublic" asp-controller="Setari" method="post" id="privacyForm" asp-controller="Profile">
+                    <form asp-action="SetarePublic" asp-controller="Setari" method="post" id="privacyForm">
                         <button type="submit" id="EditProfil">
                             Privat
                         </button>
@@ -99,7 +99,7 @@
             <h4>Modificați profilul într-unul <b>public</b>
                 @{
                     var isPublic = profile.ProfilPublic;
-                    <form asp-action="SetarePublic" asp-controller="Setari" method="post" id="privacyForm" asp-controller="Profile">
+                    <form asp-action="SetarePublic" asp-controller="Setari" method="post" id="privacyForm">
                         <button type="submit" id="EditProfil">
                             Public
                         </button>

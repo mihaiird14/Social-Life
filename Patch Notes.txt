@@ -191,3 +191,14 @@
 10.01.2025
 	- Fix bug afisare poze care sunt arhivate pe paginiile altor useri
 	- Fix bug care nu lasa un user sa urmareasca alt user, daca acesta il urmarea deja.
+11.01.2025
+	- Mici ajustari la design
+	- Adaugare posibilitatea de a posta un videoclipuri de pe yt impreuna cu un thread
+	- Adaugare meniu grupuri
+	- Adaugare posibilitatea de a crea si de a te alatura unui grup
+	- Adaugare posibilitatea a cauta un grup si de vizualiza grupurile tale
+	- Adaugare pagina For You
+	- Fix bug care nu te lasa sa stergi postari/comentari daca aveau like-uri
+	- Adaugare optiunea ca administratorul grupului sa poata sa stearga grupul
+	- Adaugare optiunea ca un membru sa paraseasca grupul
+	- Adminul poate acum sa stearga grupuri

@@ -234,3 +234,8 @@
 [id^="dropdownMenuThread"] button {
     padding: 0;
 }
+iframe{
+    width: 90%;
+    height: 40vh;
+   margin-left: 2vw;
+}

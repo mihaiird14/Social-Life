@@ -120,25 +120,26 @@ namespace Social_Life.Data
             builder.Entity<PostsComment>()
                 .HasOne(t=>t.Profile)
                 .WithMany(p=>p.PostsComments)
-                .HasForeignKey(t=>t.Id_User);
+                .HasForeignKey(t=>t.Id_User)
+                .OnDelete(DeleteBehavior.Restrict);
             builder.Entity<PostsComment>()
-                .HasOne(t=>t.Postare)
-                .WithMany(t=>t.Comments)
-                .HasForeignKey(t=>t.PostId)
-                 .OnDelete(DeleteBehavior.Restrict);
+                .HasOne(t => t.Postare)
+                .WithMany(t => t.Comments)
+                .HasForeignKey(t => t.PostId);
+                 
 
             builder.Entity<PostCommentsLike>()
                 .HasOne(tl => tl.Profile)
                 .WithMany(t => t.Post_Com_Likes)
-                .HasForeignKey(tl => tl.User_id);
-                
+                .HasForeignKey(tl => tl.User_id)
+                .OnDelete(DeleteBehavior.Restrict);
 
 
             builder.Entity<PostCommentsLike>()
                 .HasOne(tl => tl.PostsComment)
                 .WithMany(p => p.Post_Comment_Likes)
-                .HasForeignKey(tl => tl.Comment_Id)
-                .OnDelete(DeleteBehavior.Restrict);
+                .HasForeignKey(tl => tl.Comment_Id);
+                ;
             builder.Entity<Notification>()
                 .HasOne(n => n.Profile1)
                 .WithMany(p => p.Notifications)

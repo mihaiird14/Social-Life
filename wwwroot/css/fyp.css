@@ -1,0 +1,50 @@
+#sectiuni{
+    margin-top: -10vh;
+}
+#ThreadPageFYP {
+    display: none;
+}
+#ThreadPageFYP #thread-list{
+    margin-left: 35vw;
+}
+#ThreadPageFYP .CommentBox{
+    margin-top: -25vh;
+}
+#ThreadPageFYP #editComBox textarea {
+    margin-left: 2vw;
+}
+.postDet{
+    display: flex;
+}
+#PostariPageFYP #thread-box {
+    margin-left: 35vw;
+}
+#PozaFyp{
+    width: 80%;
+    height: 30vh;
+    align-self: center;
+}
+#PostariPageFYP .ButoaneThread{
+    margin-top: 5vh;
+}
+#PostariPageFYP .descrieFYP{
+    width: 80%;
+    align-self: center;
+}
+#PostariPageFYP [id^="PostareDetaliata"] {
+    display: none;
+    border: 2px solid #00ffcc;
+    position: absolute;
+    width: 60vw;
+    height: 80vh;
+    margin-top: -60vh;
+    margin-left: 25vw;
+    background-color: #1a1a1a;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+}
+#PostariPageFYP #editComBoxPost textarea {
+    margin-left: 2vw;
+}

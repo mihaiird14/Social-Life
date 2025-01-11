@@ -15,3 +15,17 @@
 #SetariProfil b{
     color:red;
 }
+.stergeGrup {
+    border: 1px solid red;
+    margin-left: 33vw;
+    width: 50vw;
+    border-radius: 5vw;
+}
+.stergeGrup h4 {
+    color: red;
+    margin-left: 3vw;
+}
+.stergeGrup form{
+    margin-top: -2vh;
+    margin-left: 2vw;
+}

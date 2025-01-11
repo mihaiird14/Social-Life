@@ -1,4 +1,4 @@
-﻿@model Social_Life.Models.Thread2;
+﻿@model Grup;
 @inject UserManager<ApplicationUser> UserManager
 @using System.Security.Claims
 @using Newtonsoft.Json;
@@ -74,36 +74,83 @@
             <a href="Identity/Account/Logout">DECONECTEAZĂ-TE</a>
         </div>
     </div>
-    <div id="SetariProfil">
-        <h3>Confidențialitate Profil</h3>
-        @if (profile.ProfilPublic)
-        {
-                <h4>Profilul dumneavoastră este public</h4>
-                <h4>Setați profilul dumneavoastră pe modul <b>privat</b>
-                @{
-                    var isPublic = profile.ProfilPublic;
-                            <form asp-action="SetarePublic" asp-controller="Setari" method="post" id="privacyForm" asp-controller="Profile">
-                                <button type="submit" id="EditProfil">
-                                    Privat
-                                </button>
-                            </form>
-                }
+    @if (currentUser != null && Model.AdminGrupId == currentUser.Id)
+    {
+        <div id="SetariProfil">
+            <h3>Confidențialitate Profil</h3>
+            @if (Model.GrupPublic==true)
+            {
+                <h4>Grupul @Model.GrupName este public</h4>
+                <h4>
+                    Setați grupul pe modul <b>privat</b>
+                    @{
+                    
+                        <form asp-action="SetarePublicGrup" asp-controller="Setari_Grup" method="post" id="privacyForm">
+                            <input type="hidden" name="GrupId" value="@Model.GrupId" />
+                            <button type="submit" id="EditProfil">
+                                Privat
+                            </button>
+                        </form>
+                    }
                 </h4>
-        }
-        else
-        {
-                <h4>Profilul dumneavoastră este privat</h4>
-                <h4>Modificați profilul într-unul <b>public</b>
-                @{
-                    var isPublic = profile.ProfilPublic;
-                            <form asp-action="SetarePublic" asp-controller="Setari" method="post" id="privacyForm" asp-controller="Profile">
-                                <button type="submit" id="EditProfil">
-                                    Public
-                                </button>
-                            </form>
-                }
+            }
+            else
+            {
+                <h4>Grupul @Model.GrupName este privat</h4>
+                <h4>
+                    Setați grupul pe modul <b>public</b>
+                    @{
+                        <form asp-action="SetarePublicGrup" asp-controller="Setari_Grup" method="post" id="privacyForm">
+                            <input type="hidden" name="GrupId" value="@Model.GrupId" />
+                            <button type="submit" id="EditProfil">
+                                Public
+                            </button>
+                        </form>
+                    }
                 </h4>
+            }
+        </div>
+        <br />
+
+        <div  class="stergeGrup">
+            <h4 id="delGr" style="color: red">ȘTERGEȚI GRUPUL</h4>
+            <form asp-action="StergeGrup" asp-controller="Setari_Grup" method="post" id="privacyForm">
+                <input type="hidden" name="GrupId" value="@Model.GrupId" />
+                <button type="submit" id="EditProfil">
+                    Șterge!
+                </button>
+            </form>
+            <br />
+        </div>
+    }
+    else{
+        if (currentUser != null && db.Grup_Membriis.Any(x=>x.UserId==currentUser.Id && x.GrupId==Model.GrupId)==true){
+            <div class="stergeGrup">
+                <h4 id="delGr" style="color: red">PĂRĂSIȚI GRUPUL</h4>
+                <form asp-action="ParasesteGrup" asp-controller="Setari_Grup" method="post" id="privacyForm">
+                    <input type="hidden" name="GrupId" value="@Model.GrupId" />
+                    <input type="hidden" name="UserId" value="@currentUser.Id" />
+                    <button type="submit" id="EditProfil">
+                        Părăsește!
+                    </button>
+                </form>
+                <br />
+            </div>
         }
-    </div>
+    }
+    @if (User.IsInRole("Admin")){
+        <br />
+        <div class="stergeGrup">
+            <h4 id="delGr" style="color: red">ȘTERGEȚI GRUPUL</h4>
+            <form asp-action="StergeGrup" asp-controller="Setari_Grup" method="post" id="privacyForm">
+                <input type="hidden" name="GrupId" value="@Model.GrupId" />
+                <button type="submit" id="EditProfil">
+                    Șterge!
+                </button>
+            </form>
+            <br />
+        </div>
+        
+    }
 </body>
 </html>

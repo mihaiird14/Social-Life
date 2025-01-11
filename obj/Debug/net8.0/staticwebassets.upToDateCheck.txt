@@ -4,6 +4,7 @@ wwwroot\css\aut.css
 wwwroot\css\CommentBox.css
 wwwroot\css\editThread.css
 wwwroot\css\fisaUrmaritori.css
+wwwroot\css\fyp.css
 wwwroot\css\grup.css
 wwwroot\css\login.css
 wwwroot\css\logout.css
@@ -34,6 +35,7 @@ wwwroot\imagini\thread.png
 wwwroot\js\arhiva.js
 wwwroot\js\CommentBox.js
 wwwroot\js\fisaUrmaritori.js
+wwwroot\js\fyp.js
 wwwroot\js\grup.js
 wwwroot\js\postare.js
 wwwroot\js\profil.js
