@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "a0qdiWEAy8cl2r6nIIHhXmp/dSKUoJP1WBpcTAcrDiI=",
+  "Hash": "/YSvO6wUSIFLVhPnzNI8ORoFSKgiaMsO0y8N3TrEDxA=",
   "Source": "Social Life",
   "BasePath": "_content/Social Life",
   "Mode": "Default",
@@ -1480,8 +1480,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "egocn3uzud",
-      "Integrity": "zgnfG99wSIJrVc/WuacHHEIJk/r8D0NnNafIOhUOWNM=",
+      "Fingerprint": "e22n2lzngi",
+      "Integrity": "NhAy7VELk9oHY06UVu7hYWxep4i1EuZ9u6UiFnIhhbw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\grup.css"
@@ -2131,8 +2131,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "koidt188hn",
-      "Integrity": "LP9MOCqkWk2eAMv+50SpgRiWSPHP86qGUxmdHODrIwk=",
+      "Fingerprint": "m5605523pv",
+      "Integrity": "1qdMeObbRQ3guBOyw0f1OxilrZskHacOmuHSz0bbDGI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\grup.js"
@@ -3480,6 +3480,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\postari\\pexels-photo-443446.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\postariGrup\\finished-my-math-5943c0.jpg",
+      "SourceId": "Social Life",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\",
+      "BasePath": "_content/Social Life",
+      "RelativePath": "postariGrup/finished-my-math-5943c0#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8l5e2tu8yq",
+      "Integrity": "zMmxFnamE2dv/wbEwrhlytSWNCFVvd0+oxhPdFKQe58=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postariGrup\\finished-my-math-5943c0.jpg"
     }
   ],
   "Endpoints": [
@@ -4068,7 +4089,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "996"
+          "Value": "6396"
         },
         {
           "Name": "Content-Type",
@@ -4076,11 +4097,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zgnfG99wSIJrVc/WuacHHEIJk/r8D0NnNafIOhUOWNM=\""
+          "Value": "\"NhAy7VELk9oHY06UVu7hYWxep4i1EuZ9u6UiFnIhhbw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 11 Jan 2025 15:06:09 GMT"
+          "Value": "Sun, 12 Jan 2025 15:56:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4090,12 +4111,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-zgnfG99wSIJrVc/WuacHHEIJk/r8D0NnNafIOhUOWNM="
+          "Value": "sha256-NhAy7VELk9oHY06UVu7hYWxep4i1EuZ9u6UiFnIhhbw="
         }
       ]
     },
     {
-      "Route": "css/grup.egocn3uzud.css",
+      "Route": "css/grup.e22n2lzngi.css",
       "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\css\\grup.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4105,7 +4126,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "996"
+          "Value": "6396"
         },
         {
           "Name": "Content-Type",
@@ -4113,11 +4134,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zgnfG99wSIJrVc/WuacHHEIJk/r8D0NnNafIOhUOWNM=\""
+          "Value": "\"NhAy7VELk9oHY06UVu7hYWxep4i1EuZ9u6UiFnIhhbw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 11 Jan 2025 15:06:09 GMT"
+          "Value": "Sun, 12 Jan 2025 15:56:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4127,7 +4148,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "egocn3uzud"
+          "Value": "e22n2lzngi"
         },
         {
           "Name": "label",
@@ -4135,7 +4156,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-zgnfG99wSIJrVc/WuacHHEIJk/r8D0NnNafIOhUOWNM="
+          "Value": "sha256-NhAy7VELk9oHY06UVu7hYWxep4i1EuZ9u6UiFnIhhbw="
         }
       ]
     },
@@ -8830,7 +8851,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "331"
+          "Value": "2385"
         },
         {
           "Name": "Content-Type",
@@ -8838,11 +8859,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LP9MOCqkWk2eAMv+50SpgRiWSPHP86qGUxmdHODrIwk=\""
+          "Value": "\"1qdMeObbRQ3guBOyw0f1OxilrZskHacOmuHSz0bbDGI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 11 Jan 2025 09:14:14 GMT"
+          "Value": "Sun, 12 Jan 2025 16:08:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8852,12 +8873,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-LP9MOCqkWk2eAMv+50SpgRiWSPHP86qGUxmdHODrIwk="
+          "Value": "sha256-1qdMeObbRQ3guBOyw0f1OxilrZskHacOmuHSz0bbDGI="
         }
       ]
     },
     {
-      "Route": "js/grup.koidt188hn.js",
+      "Route": "js/grup.m5605523pv.js",
       "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\js\\grup.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -8867,7 +8888,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "331"
+          "Value": "2385"
         },
         {
           "Name": "Content-Type",
@@ -8875,11 +8896,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LP9MOCqkWk2eAMv+50SpgRiWSPHP86qGUxmdHODrIwk=\""
+          "Value": "\"1qdMeObbRQ3guBOyw0f1OxilrZskHacOmuHSz0bbDGI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 11 Jan 2025 09:14:14 GMT"
+          "Value": "Sun, 12 Jan 2025 16:08:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8889,7 +8910,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "koidt188hn"
+          "Value": "m5605523pv"
         },
         {
           "Name": "label",
@@ -8897,7 +8918,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-LP9MOCqkWk2eAMv+50SpgRiWSPHP86qGUxmdHODrIwk="
+          "Value": "sha256-1qdMeObbRQ3guBOyw0f1OxilrZskHacOmuHSz0bbDGI="
         }
       ]
     },
@@ -14008,7 +14029,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 11 Jan 2025 15:40:03 GMT"
+          "Value": "Sun, 12 Jan 2025 14:39:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14045,7 +14066,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 11 Jan 2025 15:40:03 GMT"
+          "Value": "Sun, 12 Jan 2025 14:39:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14146,6 +14167,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-CgWnFZdP9RuHEPGIN1Cf4tvwFrCUuxSDB3qqiZRDwpI="
+        }
+      ]
+    },
+    {
+      "Route": "postariGrup/finished-my-math-5943c0.8l5e2tu8yq.jpg",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\postariGrup\\finished-my-math-5943c0.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24350"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zMmxFnamE2dv/wbEwrhlytSWNCFVvd0+oxhPdFKQe58=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Jan 2025 14:23:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8l5e2tu8yq"
+        },
+        {
+          "Name": "label",
+          "Value": "postariGrup/finished-my-math-5943c0.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zMmxFnamE2dv/wbEwrhlytSWNCFVvd0+oxhPdFKQe58="
+        }
+      ]
+    },
+    {
+      "Route": "postariGrup/finished-my-math-5943c0.jpg",
+      "AssetFile": "C:\\Users\\mihai\\OneDrive\\Desktop\\DAW\\Social Life\\wwwroot\\postariGrup\\finished-my-math-5943c0.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24350"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zMmxFnamE2dv/wbEwrhlytSWNCFVvd0+oxhPdFKQe58=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Jan 2025 14:23:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zMmxFnamE2dv/wbEwrhlytSWNCFVvd0+oxhPdFKQe58="
         }
       ]
     },

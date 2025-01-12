@@ -27,6 +27,8 @@ namespace Social_Life.Data
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Grup> Grups { get; set; }
         public DbSet<Grup_Membrii> Grup_Membriis { get; set; }
+        public DbSet<NotificaticareGrup> NotificaticareGrups { get; set; }
+        public DbSet<PostareGrup> PostareGrups { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
 
@@ -154,6 +156,21 @@ namespace Social_Life.Data
                 .HasOne(n => n.Grup)
                 .WithMany(x => x.GrupMembrii)
                 .HasForeignKey(n => n.GrupId);
+            builder.Entity<NotificaticareGrup>()
+                .HasOne(n => n.Profile)
+                .WithMany(p => p.NotificaticareGrups)
+                .HasForeignKey(n => n.Id_User)
+                .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<PostareGrup>()
+                .HasOne(n => n.Profile)
+                .WithMany(p => p.PostareGrups)
+                .HasForeignKey(n => n.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<PostareGrup>()
+                 .HasOne(n => n.Grup)
+                 .WithMany(p => p.PostareGrups)
+                 .HasForeignKey(n => n.GrupId)
+                 .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

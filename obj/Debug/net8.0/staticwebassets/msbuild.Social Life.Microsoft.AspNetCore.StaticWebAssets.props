@@ -138,8 +138,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>egocn3uzud</Fingerprint>
-      <Integrity>zgnfG99wSIJrVc/WuacHHEIJk/r8D0NnNafIOhUOWNM=</Integrity>
+      <Fingerprint>e22n2lzngi</Fingerprint>
+      <Integrity>NhAy7VELk9oHY06UVu7hYWxep4i1EuZ9u6UiFnIhhbw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\grup.css'))</OriginalItemSpec>
@@ -696,8 +696,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>koidt188hn</Fingerprint>
-      <Integrity>LP9MOCqkWk2eAMv+50SpgRiWSPHP86qGUxmdHODrIwk=</Integrity>
+      <Fingerprint>m5605523pv</Fingerprint>
+      <Integrity>1qdMeObbRQ3guBOyw0f1OxilrZskHacOmuHSz0bbDGI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\grup.js'))</OriginalItemSpec>
@@ -1853,6 +1853,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\postari\pexels-photo-443446.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\postariGrup\finished-my-math-5943c0.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Social Life</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Social Life</BasePath>
+      <RelativePath>postariGrup/finished-my-math-5943c0.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8l5e2tu8yq</Fingerprint>
+      <Integrity>zMmxFnamE2dv/wbEwrhlytSWNCFVvd0+oxhPdFKQe58=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\postariGrup\finished-my-math-5943c0.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Social Life.02d5h0qjqq.bundle.scp.css'))">
       <SourceType>Package</SourceType>

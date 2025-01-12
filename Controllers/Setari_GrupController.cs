@@ -33,7 +33,7 @@ namespace Social_Life.Controllers
 
             gr.GrupPublic = !gr.GrupPublic;
 
-            db.SaveChangesAsync();
+            db.SaveChanges();
 
             return RedirectToAction("Index", "Grup", new { GrupId = GrupId });
         }
@@ -65,7 +65,7 @@ namespace Social_Life.Controllers
             }
             db.Grup_Membriis.Remove(gm);
             db.SaveChanges();
-            return RedirectToAction("Index", "CautaGrup");
+            return RedirectToAction("Index", "Grup", new { GrupId = GrupId });
         }
     }
 }

@@ -101,3 +101,4 @@ wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 wwwroot\postari\CONCEPTUALA.png
 wwwroot\postari\images.jpg
 wwwroot\postari\pexels-photo-443446.jpeg
+wwwroot\postariGrup\finished-my-math-5943c0.jpg

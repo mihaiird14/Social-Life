@@ -28,6 +28,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/profil.css">
     <link rel="stylesheet" href="css/grup.css">
+    <link rel="stylesheet" href="css/fyp.css">
+    <link rel="stylesheet" href="css/threadForm.css">
+    <link rel="stylesheet" href="css/profileThread.css">
+    <link rel="stylesheet" href="css/CommentBox.css">
+    <link rel="stylesheet" href="css/profilePostare.css" />
+    <link rel="stylesheet" href="css/editThread.css" />
     <style>
         .pozaPostata:hover {
         transform: scale(1.1);
@@ -125,6 +131,10 @@
                 <i class="fa fa-users" aria-hidden="true"></i>
                 <a href="@Url.Action("Index", "CautaGrup")">GRUPURI</a>
             </div>
+            <div id="buton" onclick="afisMembrii()">
+                <i class="fa fa-user-circle" aria-hidden="true"></i>
+                <a href="#">MEMBRII</a>
+            </div>
             <div id="buton">
                 <i class="fa fa-cog" aria-hidden="true"></i>
                 <a href="@Url.Action("Index", "Setari_Grup",new { GrupId = Model.GrupId} )">SETĂRI</a>
@@ -158,18 +168,201 @@
         }
         <h3>Număr membrii: @db.Grup_Membriis.Where(x=>x.GrupId==Model.GrupId).Count()</h3>
         @if(currentUser!=null){
-            @if (db.Grup_Membriis.FirstOrDefault(x => x.GrupId == Model.GrupId && x.UserId == currentUser.Id)==null)
+            @if (db.Grup_Membriis.Any(x => x.GrupId == Model.GrupId && x.UserId == currentUser.Id)==false)
             {
-                <form method="post" id="alaturateGrup" asp-controller="Grup" asp-action="JoinGrup">
-                    <input type="hidden" name="UserId" value="@currentUser.Id" />
-                    <input type="hidden" name="GrupId" value="@Model.GrupId" />
-                    <button class="btn btn-primary" type="submit">Alatură-te!</button>        
-                </form>
+                var asteptare = db.NotificaticareGrups.Any(n => n.NotificationType == "Request_Grup" && n.Id_User == currentUser.Id && n.GrupId == Model.GrupId && !n.Accepted);
+
+                if (asteptare == true)
+                {
+                    <button id="alaturateGrup" class="btn btn-primary" type="submit">În așteptare!</button>
+                }
+                else{
+                    <form method="post" id="alaturateGrup" asp-controller="Grup" asp-action="JoinGrup">
+                        <input type="hidden" name="UserId" value="@currentUser.Id" />
+                        <input type="hidden" name="GrupId" value="@Model.GrupId" />
+                        <button class="btn btn-primary" type="submit">Alatură-te!</button>
+                    </form>
+
+                }
             }
             else{
                 <button id="alaturateGrup" class="btn btn-primary" type="submit">Membru!</button>
             }
         }
+
     </div>
+
+
+
+    @if(Model.GrupPublic==false && !User.IsInRole("Admin") && db.Grup_Membriis.Any(x=>x.GrupId==Model.GrupId && x.UserId==currentUser.Id)==false){
+        <img id="ImgPrivat" src="/imagini/privat.png" />
+        <style>
+            #ImgPrivat {
+            height: 47vh;
+            margin-left: 45vw;
+            margin-top: 7vh;
+            }
+        </style>
+    }
+    else{
+        <div onclick="afisFormGrPost()" id="AddGrPost" class="btn btn-primary">Adaugă Postare</div>
+        <div id="PostariFormular">
+            <form method="post" asp-controller="Grup" asp-action="AddPostGr" id="FormAddGrPost" enctype="multipart/form-data">
+                <i id="xGrPost" class="fa-solid fa-x" onclick="GrFormPostClose()"></i>
+                <label id="TextGrPost" class="note-label">Adaugă o descriere</label>
+                <textarea name="TextPostGr" id="note" class="note-textarea" placeholder="Adaugă un text.."></textarea>
+                <br />
+                <label id="TextGrPost" class="note-label">Adaugă o poza</label>
+                <br />
+                <img id="pozaVizualizareGr" />
+                <br />
+                <input id="PozaInputGr" type="file" name="imagine" accept="image/*" />
+                <input type="hidden" name="GrupId" value="@Model.GrupId" />
+                <input type="hidden" name="UserId" value="@currentUser.Id" />
+                <br />
+                <button class="submit-button" type="submit">Trimite</button>
+            </form>
+        </div>
+        <div id="ListaPostari">
+            @foreach (var x in db.PostareGrups.Where(p => p.GrupId == Model.GrupId).OrderByDescending(t => t.Data))
+            {
+                x.Profile = db.Profiles.FirstOrDefault(p => p.Id_User == x.UserId);
+                <div id="thread-box" class="postareGr-@x.Id">
+                    <img src="@x.Profile?.ProfileImage" alt="Profil" class="profile-picture">
+                    <p class="profile-name">@x.Profile?.Username</p>
+                    <div id="dropdownThread">
+                        <i id="btnMenuGr" onclick="openMenuPostGr(@x.Id)" class="fa fa-ellipsis-v dropdown-toggle"></i>
+                        <div id="dropdownMenuPostGr-@x.Id">
+                            @if (x.UserId == currentUser.Id)
+                            {
+                                <div onclick="EditPostGr(@x.Id)" id="EditBT" class=" dropdown-item"><i class="fas fa-edit"></i>Editează</div>
+                            }
+                            @if (x.UserId == currentUser.Id || currentUser.Id == Model.AdminGrupId || User.IsInRole("Admin"))
+                            {
+                                <div onclick="DeletePostGr(@x.Id)" id="DeleteBT" class="dropdown-item"><i class="fa fa-trash" aria-hidden="true"></i>Șterge</div>
+                            }
+                        </div>
+                    </div>
+                    <div class="descrieFYP" id="descrierePostare-@x.Id"><p id="descReal-@x.Id">@x.Text</p></div>
+                    @if (x.Imagine != null)
+                    {
+                        <img id="PozaFyp" src="@x.Imagine">
+                    }
+
+                </div>
+                <div id="deleteBoxGr" class="deletePostGr-@x.Id">
+                    <i id="xDelete" onclick="xDeletePostGr(@x.Id)"class="fa-solid fa-x" data-thread-id="@x.Id"></i>
+                    <i id="dng" class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                    <form id="confButton" method="post" asp-controller="Grup" asp-action="DeletePostGr">
+                        <input type="hidden" name="PostGrId" value="@x.Id" />
+                        <input type="hidden" name="GrupId" value="@x.GrupId" />
+                        <button type="submit" id="confirmaButton">CONFIRMĂ!</button>
+                    </form>
+                </div>
+                <div id="editBoxGr" class="editPostGr-@x.Id">
+                    <i id="xEdit" class="fa-solid fa-x" data-thread-id="@x.Id"></i>
+                    <label for="note" class="note-label-edit">EDITEAZĂ POSTAREA</label>
+                    <h4>* Imaginea nu poate fi schimbata!</h4>
+
+                    <form method="post" asp-controller="Grup" asp-action="EditPostGr">
+                        <input type="hidden" name="PostGrId" value="@x.Id" />
+                        <textarea class="note-textarea-edit-@x.Id" placeholder="editeaza postarea.." name="PostGrText">@x.Text</textarea>
+                        <input type="hidden" name="GrupId" value="@Model.GrupId" />
+                        <button class="submit-button-edit" type="submit">Editează!</button>
+                    </form>
+                </div>
+                <br />
+            }
+        </div>
+        <div id="listaMembriiGrup">
+            <i id="xListaMembrii" class="fa-solid fa-x" onclick="xListaMembrii()"></i>
+            <form id="SearchBox" method="get" asp-controller="Grup" asp-action="SearchGM">
+                <div class="input-group mb-3">
+                    <input id="SearchChenar" type="text" class="form-control" name="query" placeholder="Cauta..." value="@ViewBag.Query" />
+                    <input type="hidden" name="GrupId" value="@Model.GrupId" />
+                    <button class="btn btn-primary" type="submit"><i id="SearchIcon" class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+            </form>
+            <br />
+            @if (TempData["ListaGM"] == null)
+            {
+                @foreach (var x in db.Grup_Membriis.Where(p => p.GrupId == Model.GrupId).OrderByDescending(p => p.Data))
+                {
+                    x.Profile = db.Profiles.FirstOrDefault(t => t.Id_User == x.UserId);
+                    <a id="link" href="/Users?username=@x.Profile.Username">
+                        <div id="fUsername">
+                            <img id="fPoza" src="@x.Profile.ProfileImage" />
+                            <br />
+                            <p>@x.Profile.Username</p>
+
+                            <form asp-action="ParasesteGrup" asp-controller="Setari_Grup" method="post">
+                                <input type="hidden" name="GrupId" value="@Model.GrupId" />
+                                <input type="hidden" name="UserId" value="@x.UserId" />
+                                @if (currentUser != null && (currentUser.Id == Model.AdminGrupId && currentUser.Id != x.UserId) || (User.IsInRole("Admin") && Model.AdminGrupId != x.UserId))
+                                {
+                                    <button id="deleteF" type="submit">Șterge</button>
+                                }
+                                else if (currentUser != null && currentUser.Id != Model.AdminGrupId)
+                                {
+                                    <button id="deleteF" type="submit" style="visibility:hidden">Șterge</button>
+                                }
+                            </form>
+
+                        </div>
+                    </a>
+                    <br />
+                }
+            }
+            else
+            {
+                @foreach (var x in JsonConvert.DeserializeObject<List<Profile>>(TempData["ListaGM"]?.ToString()).OrderBy(p => p.Username))
+                {
+                    <a id="link" href="/Users?username=@x.Username">
+                        <div id="fUsername">
+                            <img id="fPoza" src="@x.ProfileImage" />
+                            <br />
+                            <p>@x.Username</p>
+
+                            <form asp-action="ParasesteGrup" asp-controller="Setari_Grup" method="post">
+                                <input type="hidden" name="GrupId" value="@Model.GrupId" />
+                                <input type="hidden" name="UserId" value="@x.Id_User" />
+                                @if (currentUser != null && currentUser.Id == Model.AdminGrupId && currentUser.Id != x.Id_User)
+                                {
+                                    <button id="deleteF" type="submit">Șterge</button>
+                                }
+                                else if (currentUser != null && currentUser.Id != Model.AdminGrupId)
+                                {
+                                    <button id="deleteF" type="submit" style="visibility:hidden">Șterge</button>
+                                }
+                            </form>
+
+                        </div>
+                    </a>
+                    <br />
+                }
+            }
+        </div>
+    }
+
+    <script src="js/grup.js"></script>
+    <script src="js/fyp.js"></script>
+    <script>
+        const imageUpload = document.getElementById('PozaInputGr');
+        const imagePreview = document.getElementById('pozaVizualizareGr');
+
+        imageUpload.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 </html>

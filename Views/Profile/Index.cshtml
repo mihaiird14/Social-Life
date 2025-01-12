@@ -133,6 +133,17 @@
                     </style>
 
                 }
+                @if (@db.NotificaticareGrups.Any(n => n.IsRead == false &&
+                        db.Grups.Any(g => g.GrupId == n.GrupId && g.AdminGrupId == currentUser.Id)))
+                {
+                    <style>
+                        .notif i {
+                            color: red;
+                            animation: notificare 1s infinite ease-in-out;
+                        }
+                    </style>
+
+                }
             </div>
             <div id="buton">
                 <i class="fa fa-users" aria-hidden="true"></i>
@@ -288,7 +299,7 @@
                                          <input type="hidden" name="Id" value="@postare.Id" />
                                          <button id="EditeazaPostare"><i class="fas fa-archive"></i>Arhivează</button>
                                     </form>
-                                    <div id="StergePostare"><i class="fa-solid fa-flag"></i>Raportează</div>
+                                    
                                     <div id="StergePostare" onclick="openConfirmareStergerePostare(@postare.Id)"><i class="fa fa-trash" aria-hidden="true"></i>Șterge</div>
                                 </div>
                                 <img id="pozaDT-@postare.Id" />
@@ -323,10 +334,7 @@
                                                             <button onclick="editComPost(@com.PostCommentId)" type="submit" id="EditCom" class="dropdown-item-comentarii"><i class="fas fa-edit"></i>Editează</button>
                                                         </form>
                                                     }
-                                                    <form style="display: inline;" data-thread-id="#">
-                                                        <input type="hidden" name="id" value="#" />
-                                                        <button type="submit" id="DeleteCom" class="dropdown-item-comentarii"><i class="fa-solid fa-flag"></i>Raportează</button>
-                                                    </form>
+                                            
                                                     <form  class="delete-thread-form-com" style="display: inline;" data-com-id="#" data-thread-id="#">
                                                         <input type="hidden" name="PostCommentId" value="@com.PostCommentId" />
                                                         <button onclick="deletePostComm(@com.PostCommentId)" type="submit" id="DeleteCom" class="dropdown-item-comentarii"><i class="fa fa-trash" aria-hidden="true"></i>Șterge</button>
@@ -452,10 +460,7 @@
                                         <input type="hidden" name="id" value="@thread.ThreadId" />
                                         <button type="submit" id="EditBT" class=" dropdown-item"><i class="fas fa-edit"></i>Editează</button>
                                     </form>
-                                    <form method="post" style="display: inline;" data-thread-id="@thread.ThreadId">
-                                        <input type="hidden" name="id" value="@thread.ThreadId" />
-                                        <button type="submit" id="DeleteBT" class="dropdown-item"><i class="fa-solid fa-flag"></i>Raportează</button>
-                                    </form>
+                          
                                     <form method="post" class="delete-thread-form" style="display: inline;" data-thread-id="@thread.ThreadId">
                                         <input type="hidden" name="id" value="@thread.ThreadId" />
                                         <button type="submit" id="DeleteBT" class="dropdown-item"><i class="fa fa-trash" aria-hidden="true"></i>Șterge</button>
@@ -562,10 +567,7 @@
                                                     <button type="submit" id="EditCom" class="dropdown-item-comentarii"><i class="fas fa-edit"></i>Editează</button>
                                                 </form>
                                             }
-                                            <form  style="display: inline;" data-thread-id="@thread.ThreadId">
-                                                <input type="hidden" name="id" value="@thread.ThreadId" />
-                                                <button type="submit" id="DeleteCom" class="dropdown-item-comentarii"><i class="fa-solid fa-flag"></i>Raportează</button>
-                                            </form>
+                                      
                                             <form class="delete-thread-form-com" style="display: inline;" data-com-id="@com.ThreadCommentId" data-thread-id="@thread.ThreadId">
                                                 <input type="hidden" name="ThreadCommentId" value="@com.ThreadCommentId" />
                                                 <button type="submit" id="DeleteCom" class="dropdown-item-comentarii"><i class="fa fa-trash" aria-hidden="true"></i>Șterge</button>

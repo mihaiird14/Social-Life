@@ -202,3 +202,8 @@
 	- Adaugare optiunea ca administratorul grupului sa poata sa stearga grupul
 	- Adaugare optiunea ca un membru sa paraseasca grupul
 	- Adminul poate acum sa stearga grupuri
+12.01.2025
+	- Adaugare lista membrii grup + functie de search pe membrii
+	- Adminul grupului/platformei poate sa elimine membrii, cu exceptia administratorului grupului
+	- Adaugare cerere de join la useri pentru grupurile private
+	- Adaugare postari grupuri

@@ -92,5 +92,70 @@ namespace Social_Life.Controllers
             TempData["Message"] = accept ? "Ai acceptat cererea de urmărire." : "Ai respins cererea de urmărire.";
             return RedirectToAction("Index", "Notification");
         }
+        [HttpPost]
+        public IActionResult HandleGroupRequest(int notificationId, bool accept)
+        {
+            var notification = db.NotificaticareGrups.FirstOrDefault(n => n.NotificationId == notificationId);
+            if (notification == null)
+            {
+                return NotFound("Notificarea nu a fost găsită.");
+            }
+
+            var gr=db.Grups.FirstOrDefault(x=>x.GrupId==notification.GrupId);
+
+            if (accept)
+            {
+                var gm = new Grup_Membrii
+                {
+                    UserId = notification.Id_User,
+                    GrupId = notification.GrupId,
+                    Data = DateTime.Now
+                };
+                db.Grup_Membriis.Add(gm);
+
+                var feedbackNotification = new Notification
+                {
+                    Id_User = notification.Id_User,
+                    Id_User2 = gr.AdminGrupId,
+   
+                    NotificationType = "FollowAccepted",
+                    Message = $"{db.Profiles.FirstOrDefault(p => p.Id_User == gr.AdminGrupId)?.Username} ți-a acceptat cererea de intrare în grupul {gr.GrupName}!",
+                    Date = DateTime.Now
+                };
+                db.Notifications.Add(feedbackNotification);
+                //ptr celalat
+                var feedbackNotification2 = new Notification
+                {
+                    Id_User = gr.AdminGrupId,
+                    Id_User2 = notification.Id_User,
+                    NotificationType = "FollowAccepted",
+                    Message = $"I-ai acceptat cererea de intrare în grupul {gr.GrupName} lui {db.Profiles.FirstOrDefault(p => p.Id_User == notification.Id_User)?.Username}.",
+                    Date = DateTime.Now
+                };
+                db.Notifications.Add(feedbackNotification2);
+                db.SaveChanges();
+            }
+            else
+            {
+               var feedbackNotification = new Notification
+                {
+                   Id_User = notification.Id_User,
+                   Id_User2 = gr.AdminGrupId,
+                   NotificationType = "FollowRejected",
+                    Message = $"{db.Profiles.FirstOrDefault(p => p.Id_User == gr.AdminGrupId)?.Username} ți-a respins cererea de intrare în grupul {gr.GrupName}.",
+                    Date = DateTime.Now
+                };
+
+                db.Notifications.Add(feedbackNotification);
+                db.SaveChanges();
+            }
+
+            //Ștergem notificarea inițială
+            db.NotificaticareGrups.Remove(notification);
+            db.SaveChanges();
+
+            TempData["Message"] = accept ? "Ai acceptat cererea de urmărire." : "Ai respins cererea de urmărire.";
+            return RedirectToAction("Index", "Notification");
+        }
     }
 }

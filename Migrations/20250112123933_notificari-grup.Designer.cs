@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Social_Life.Data;
 
@@ -11,9 +12,11 @@ using Social_Life.Data;
 namespace Social_Life.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250112123933_notificari-grup")]
+    partial class notificarigrup
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -472,40 +475,6 @@ namespace Social_Life.Migrations
                     b.ToTable("Postari");
                 });
 
-            modelBuilder.Entity("Social_Life.Models.PostareGrup", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("Data")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("GrupId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Imagine")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("GrupId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("PostareGrups");
-                });
-
             modelBuilder.Entity("Social_Life.Models.PostareLike2", b =>
                 {
                     b.Property<int>("PostareLikeId")
@@ -896,25 +865,6 @@ namespace Social_Life.Migrations
                     b.Navigation("Profile");
                 });
 
-            modelBuilder.Entity("Social_Life.Models.PostareGrup", b =>
-                {
-                    b.HasOne("Social_Life.Models.Grup", "Grup")
-                        .WithMany("PostareGrups")
-                        .HasForeignKey("GrupId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("Social_Life.Models.Profile", "Profile")
-                        .WithMany("PostareGrups")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Grup");
-
-                    b.Navigation("Profile");
-                });
-
             modelBuilder.Entity("Social_Life.Models.PostareLike2", b =>
                 {
                     b.HasOne("Social_Life.Models.Postare", "Postare")
@@ -1041,8 +991,6 @@ namespace Social_Life.Migrations
             modelBuilder.Entity("Social_Life.Models.Grup", b =>
                 {
                     b.Navigation("GrupMembrii");
-
-                    b.Navigation("PostareGrups");
                 });
 
             modelBuilder.Entity("Social_Life.Models.Postare", b =>
@@ -1074,8 +1022,6 @@ namespace Social_Life.Migrations
                     b.Navigation("Notifications");
 
                     b.Navigation("Post_Com_Likes");
-
-                    b.Navigation("PostareGrups");
 
                     b.Navigation("Postari");
 

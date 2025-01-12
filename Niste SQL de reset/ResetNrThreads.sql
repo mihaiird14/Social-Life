@@ -4,3 +4,4 @@ DBCC CHECKIDENT ('ThreadComment', RESEED, 0);
 DBCC CHECKIDENT ('Postari', RESEED, 0);
 DBCC CHECKIDENT ('PostareLikes', RESEED, 0);
 DBCC CHECKIDENT ('Grups', RESEED, 0);
+DBCC CHECKIDENT ('Notifications', RESEED, 0);

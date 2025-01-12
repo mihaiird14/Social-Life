@@ -58,7 +58,7 @@
     <div class="sideMenu">
         <div id="buton1">
             <i class="fa fa-home" aria-hidden="true"></i>
-            <a href="#">FOR YOU</a>
+            <a asp-controller="ForYou" asp-action="Index">FOR YOU</a>
         </div>
         <div id="buton">
             <i class="fa fa-search" aria-hidden="true"></i>
@@ -70,7 +70,7 @@
         </div>
         <div id="buton">
             <i class="fa fa-users" aria-hidden="true"></i>
-            <a href="#">GRUPURI</a>
+            <a href="@Url.Action("Index", "CautaGrup")">GRUPURI</a>
         </div>
         <div id="buton">
             <i class="fa fa-cog" aria-hidden="true"></i>

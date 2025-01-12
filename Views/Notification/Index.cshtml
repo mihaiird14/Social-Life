@@ -35,19 +35,19 @@
     <link rel="stylesheet" href="css/notificari.css">
     <style>
         ::-webkit-scrollbar {
-            width: 4px;
+        width: 4px;
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: #00ffcc;
-            border-radius: 5px;
-            width: 6px;
-            height: 40px;
+        background-color: #00ffcc;
+        border-radius: 5px;
+        width: 6px;
+        height: 40px;
         }
 
         ::-webkit-scrollbar-track {
-            background-color: transparent;
-            border-radius: 20px;
+        background-color: transparent;
+        border-radius: 20px;
         }
 
         scrollbar-width: thin;
@@ -61,7 +61,7 @@
     <div class="sideMenu">
         <div id="buton1">
             <i class="fa fa-home" aria-hidden="true"></i>
-            <a href="#">FOR YOU</a>
+            <a asp-controller="ForYou" asp-action="Index">FOR YOU</a>
         </div>
         <div id="buton">
             <i class="fa fa-search" aria-hidden="true"></i>
@@ -73,7 +73,7 @@
         </div>
         <div id="buton">
             <i class="fa fa-users" aria-hidden="true"></i>
-            <a href="#">GRUPURI</a>
+            <a href="@Url.Action("Index", "CautaGrup")">GRUPURI</a>
         </div>
         <div id="buton">
             <i class="fa fa-cog" aria-hidden="true"></i>
@@ -85,10 +85,29 @@
         </div>
     </div>
     <div id="Notificari">
+        @foreach (var notification in db.NotificaticareGrups.OrderByDescending(t => t.Date))
+        {
+
+            var gr = db.Grups.FirstOrDefault(x => x.GrupId == notification.GrupId);
+            @if (gr!=null && currentUser!=null && gr.AdminGrupId==currentUser.Id  && notification.NotificationType == "Request_Grup")
+            {
+                    <div id="notificareDiv">
+                        <p>@notification.Message</p>
+                        <form method="post" asp-controller="Notification" asp-action="HandleGroupRequest">
+                            <input type="hidden" name="notificationId" value="@notification.NotificationId" />
+                            <button id="succes" type="submit" name="accept" value="true" class="btn btn-success">Acceptă</button>
+                            <button id="respins" type="submit" name="accept" value="false" class="btn btn-danger">Respinge</button>
+
+                        </form>
+                    </div>
+                    <br/>
+   
+            }
+        }
         @foreach (var notification in db.Notifications.Where(t => t.Id_User == user_Id).OrderByDescending(t => t.Date))
         {
-                @if (notification.NotificationType == "FollowRequest12")
-                {
+            @if (notification.NotificationType == "FollowRequest12")
+            {
                     <div id="notificareDiv">
                         <p>@notification.Message</p>
                         <form method="post" asp-controller="Notification" asp-action="HandleFollowRequest">
@@ -100,7 +119,7 @@
                     </div>
                     <br/>
    
-                }
+            }
                 @if (notification.NotificationType == "FollowAccepted2"){
                     <div id="notificareDiv">
                         <p>@notification.Message</p>
