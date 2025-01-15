@@ -102,6 +102,7 @@
     <div id="header">
         <img id="logo" src="imagini/logoAlb.png">
     </div>
+
     <div class="sideMenu">
         @if (SignInManager.IsSignedIn(User))
         {
@@ -156,7 +157,7 @@
             <div id="buton">
                 <a href="Identity/Account/Logout">DECONECTEAZĂ-TE</a>
             </div>
-        }
+        }        
         else{
             <div id="buton1">
                 <i class="fa-solid fa-right-to-bracket"></i>
@@ -631,6 +632,7 @@
                 @foreach (var x in db.Follows.Where(p => p.Id_Urmaritor == user_Id).OrderByDescending(p=>p.Data))
                 {
                     x.Urmarit = db.Profiles.FirstOrDefault(t => t.Id_User == x.Id_Urmarit);
+                    @if(x.Urmarit.ContSters==false){
                     <a id="link" onclick="xFollow()" href="/Users?username=@x.Urmarit.Username"><div id="fUsername">
                         <img id="fPoza" src="@x.Urmarit.ProfileImage" />
                         <br />
@@ -642,6 +644,7 @@
                         </form>
                     </div></a>
                     <br />
+                    }
                 }
             }
             else{
@@ -672,22 +675,24 @@
             <br />
             @if (TempData["ListaFF"] == null)
             {
-                @foreach (var x in db.Follows.Where(p => p.Id_Urmarit == user_Id).OrderByDescending(p => p.Data))
+                @foreach (var x in db.Follows.Where(p => p.Id_Urmarit == user_Id ).OrderByDescending(p => p.Data))
                 {
                     x.Urmaritor = db.Profiles.FirstOrDefault(t => t.Id_User == x.Id_Urmaritor);
-                    <a id="link" onclick="xFollow()" href="/Users?username=@x.Urmaritor.Username">
-                        <div id="fUsername">
-                            <img id="fPoza" src="@x.Urmaritor.ProfileImage" />
-                            <br />
-                            <p>@x.Urmaritor.Username</p>
-                            <form method="post" asp-controller="Profile" asp-action="DeleteFollower2">
-                                <input type="hidden" name="IdUrmaritor" value="@x.Id_Urmaritor" />
-                                <input type="hidden" name="IdUrmarit" value="@x.Id_Urmarit" />
-                                <button id="deleteF" type="submit">Șterge</button>
-                            </form>
-                        </div>
-                    </a>
-                    <br />
+                    if(x.Urmaritor.ContSters==false){
+                        <a id="link" onclick="xFollow()" href="/Users?username=@x.Urmaritor.Username">
+                            <div id="fUsername">
+                                <img id="fPoza" src="@x.Urmaritor.ProfileImage" />
+                                <br />
+                                <p>@x.Urmaritor.Username</p>
+                                <form method="post" asp-controller="Profile" asp-action="DeleteFollower2">
+                                    <input type="hidden" name="IdUrmaritor" value="@x.Id_Urmaritor" />
+                                    <input type="hidden" name="IdUrmarit" value="@x.Id_Urmarit" />
+                                    <button id="deleteF" type="submit">Șterge</button>
+                                </form>
+                            </div>
+                        </a>
+                        <br />
+                    }
                 }
             }
             else

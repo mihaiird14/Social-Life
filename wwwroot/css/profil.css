@@ -440,3 +440,24 @@ input[type="file"] {
         transform: scale(1);
     }
 }
+#StergeProfil {
+    background-color: red;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid red;
+    border-radius: 25px;
+    margin-left: 3vh;
+    margin-top: 1.5vw;
+    outline: none;
+    color: white;
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+    width: 10vw;
+    height: 36px;
+}
+
+    #StergeProfil:hover {
+        color: red;
+        border: 1px solid white;
+        background-color: white;
+    }

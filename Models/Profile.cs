@@ -18,6 +18,7 @@ namespace Social_Life.Models
         public string Bio { get; set; }
         public bool ProfilPublic { get; set; } = true;
         public string ProfileImage { get; set; }
+        public bool ContSters { get; set; } = false;
         public virtual ApplicationUser User { get; set; }
         public virtual ICollection<Thread2>? Threads { get; set; }
         public virtual ICollection<ThreadLike>? LikedThreads { get; set; }

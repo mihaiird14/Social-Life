@@ -12,6 +12,7 @@ namespace Social_Life.Models
         public string GrupImagine { get; set; }
         public bool GrupPublic { get; set; } = true;
         public DateTime DataGr { get; set; }
+        public string DescriereGr { get; set; }
         public virtual ICollection<Grup_Membrii>? GrupMembrii { get; set; }
         public virtual ICollection<PostareGrup>? PostareGrups { get; set; }
     }

@@ -71,7 +71,17 @@
     overflow-wrap: break-word;
     height: 5vh;
 }
-#pozaGr{
+#GrDescriere {
+    border: 1px solid white;
+    background: none;
+    width: 25vw;
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    overflow-wrap: break-word;
+    height: 5vh;
+}
+#pozaGr {
     width: 30vw;
     height: 20vh;
 }

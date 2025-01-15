@@ -25,6 +25,11 @@ namespace Social_Life.Controllers
          public IActionResult Index()
          {
             var userId = _userManager.GetUserId(User);
+            var profil = db.Profiles.FirstOrDefault(x => x.Id_User == userId);
+            if (profil!=null && profil.ContSters == true)
+            {
+                return NotFound("Profilul a fost sters.");
+            }
             int NrThread = db.Threads.Count(p => p.Id_User == userId);
             ViewBag.NrThread = NrThread;
             int NrPostari = db.Postari.Count(p => p.UserId == userId);
@@ -220,7 +225,7 @@ namespace Social_Life.Controllers
      .Where(p => db.Follows
          .Any(f => f.Id_Urmaritor == currentUserId && f.Id_Urmarit == p.Id_User) &&
                  (p.Username.Contains(query) || p.Nume.Contains(query) || p.Prenume.Contains(query)) &&
-                 p.Id_User != currentUserId)
+                 p.Id_User != currentUserId && p.ContSters==false)
      .OrderBy(p => p.Username)
      .ToList();
 
@@ -258,7 +263,7 @@ namespace Social_Life.Controllers
      .Where(p => db.Follows
          .Any(f => f.Id_Urmarit == currentUserId && f.Id_Urmaritor == p.Id_User) &&
                  (p.Username.Contains(query) || p.Nume.Contains(query) || p.Prenume.Contains(query)) &&
-                 p.Id_User != currentUserId)
+                 p.Id_User != currentUserId && p.ContSters==false)
      .OrderBy(p => p.Username)
      .ToList();
 

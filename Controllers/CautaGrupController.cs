@@ -27,7 +27,7 @@ namespace Social_Life.Controllers
         [HttpPost]
         public async Task<IActionResult> New(Grup grup, IFormFile GrupImagine)
         {
-            
+
             if (grup.GrupName == null)
             {
                 TempData["EditTh"] = "Numele grupului este obligatoriu!";
@@ -36,6 +36,17 @@ namespace Social_Life.Controllers
             if (grup.GrupName.Length < 5 || grup.GrupName.Length > 50)
             {
                 TempData["EditTh"] = "Numele grupului trebuie sa fie intre 5 si 50 caractere!";
+                return RedirectToAction("Index", "CautaGrup");
+            }
+            if (grup.DescriereGr == null)
+            {
+
+                TempData["EditTh"] = "Descrierea grupului este obligatoriu!";
+                return RedirectToAction("Index", "CautaGrup");
+            }
+            if (grup.DescriereGr.Length < 5 || grup.DescriereGr.Length > 50)
+            {
+                TempData["EditTh"] = "Descrierea grupului trebuie sa fie intre 5 si 50 caractere!";
                 return RedirectToAction("Index", "CautaGrup");
             }
             if (GrupImagine != null && GrupImagine.Length > 0)

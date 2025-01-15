@@ -215,5 +215,20 @@ namespace Social_Life.Controllers
 
             return RedirectToAction("Index", "Users", new { username = username });
         }
+        [HttpPost]
+        public IActionResult DeleteUser(string UserId)
+        {
+
+            var profil = db.Profiles.First(x => x.Id_User == UserId);
+
+            if (profil == null)
+            {
+                return NotFound("Thread not found.");
+            }
+            profil.ContSters = true;
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "Profile");
+        }
     }
 }

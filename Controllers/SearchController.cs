@@ -32,7 +32,7 @@ namespace Social_Life.Controllers
 
             var results = db.Profiles
                 .Where(p => (p.Username.Contains(query) || p.Nume.Contains(query) || p.Prenume.Contains(query))
-                            && p.Id_User != currentUserId).OrderBy(p => p.Username).ToList();
+                           && p.ContSters==false && p.Id_User != currentUserId).OrderBy(p => p.Username).ToList();
 
             ViewBag.Query = query;
             return View("~/Views/Profile/Search.cshtml", results);

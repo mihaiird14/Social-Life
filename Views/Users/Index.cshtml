@@ -190,7 +190,13 @@
                         <button type="submit" id="EditProfil" class="btn btn-primary">Follow</button>
                 }
             </form>
-
+            @if(User.IsInRole("Admin")){
+                <form method="post" asp-controller="Users" asp-action="DeleteUser">
+                    <input type="hidden" name="UserId" value="@Model.Id_User" />
+                    <button type="submit" id="StergeProfil" class="btn btn-danger">Șterge User</button>
+                </form>
+                
+            }
             @if (!SignInManager.IsSignedIn(User))
             {
                     <style>

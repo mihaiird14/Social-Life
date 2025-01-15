@@ -191,7 +191,9 @@
         }
 
     </div>
-
+    <div id="SectiuneGrup">
+        <h3>Descriere: @Model.DescriereGr</h3>
+     </div>
 
 
     @if(Model.GrupPublic==false && !User.IsInRole("Admin") && db.Grup_Membriis.Any(x=>x.GrupId==Model.GrupId && x.UserId==currentUser.Id)==false){
